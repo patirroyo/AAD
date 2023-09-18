@@ -1,27 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/RazorPages1.csproj": {}
+    "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages1\\RazorPages1.csproj": {}
   },
   "projects": {
-    "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/RazorPages1.csproj": {
+    "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages1\\RazorPages1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/RazorPages1.csproj",
+        "projectUniqueName": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages1\\RazorPages1.csproj",
         "projectName": "RazorPages1",
-        "projectPath": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/RazorPages1.csproj",
-        "packagesPath": "/Users/alberto/.nuget/packages/",
-        "outputPath": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/obj/",
+        "projectPath": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages1\\RazorPages1.csproj",
+        "packagesPath": "C:\\Users\\alber\\.nuget\\packages\\",
+        "outputPath": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alberto/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\alber\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
-          "/usr/local/share/dotnet/sdk/7.0.308/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,12 +39,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.11, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -64,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.308/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

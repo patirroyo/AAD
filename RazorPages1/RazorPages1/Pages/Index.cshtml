@@ -1,16 +1,10 @@
 ﻿@page
-@model IndexModel /*El modelo que cojo es IndexModel, estamos vinculando el controlador (Index.cshtml.cs)
-                    con esta vista (Index.cshtml)
-                    Un objeto de la clase IndexModel*/
+@model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">@Model.Mensaje</h1> <!-- las instrucciones siempre precedidad de arroba
-                                                si ponemos varias instruciones pondremos {}
-                                                el Model se refiere al objeto de la clase IndexModel -->
-                                                
+    <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
-
