@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "RazorPages.Modelos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/RazorPages.Modelos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RazorPages.Modelos.dll": {}
+        }
+      },
+      "RazorPages.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "RazorPages.Modelos": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RazorPages.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RazorPages.Service.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "RazorPages.Modelos/1.0.0": {
+      "type": "project",
+      "path": "../RazorPage/RazorPages.Modelos.csproj",
+      "msbuildProject": "../RazorPage/RazorPages.Modelos.csproj"
+    },
+    "RazorPages.Service/1.0.0": {
+      "type": "project",
+      "path": "../RazorPages.Service/RazorPages.Service.csproj",
+      "msbuildProject": "../RazorPages.Service/RazorPages.Service.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "RazorPages.Modelos >= 1.0.0",
+      "RazorPages.Service >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\alber\\.nuget\\packages\\": {}
@@ -33,7 +71,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages.Service\\RazorPages.Service.csproj": {
+              "projectPath": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages.Service\\RazorPages.Service.csproj"
+            },
+            "D:\\Salesianos\\AAD\\RazorPages1\\RazorPage\\RazorPages.Modelos.csproj": {
+              "projectPath": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPage\\RazorPages.Modelos.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

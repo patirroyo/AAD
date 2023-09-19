@@ -28,3 +28,9 @@ D:\Salesianos\AAD\RazorPages1\RazorPages1\obj\Debug\net6.0\refint\RazorPages1.dl
 D:\Salesianos\AAD\RazorPages1\RazorPages1\obj\Debug\net6.0\RazorPages1.pdb
 D:\Salesianos\AAD\RazorPages1\RazorPages1\obj\Debug\net6.0\RazorPages1.genruntimeconfig.cache
 D:\Salesianos\AAD\RazorPages1\RazorPages1\obj\Debug\net6.0\ref\RazorPages1.dll
+D:\Salesianos\AAD\RazorPages1\RazorPages1\bin\Debug\net6.0\RazorPages.Modelos.dll
+D:\Salesianos\AAD\RazorPages1\RazorPages1\bin\Debug\net6.0\RazorPages.Service.dll
+D:\Salesianos\AAD\RazorPages1\RazorPages1\bin\Debug\net6.0\RazorPages.Service.pdb
+D:\Salesianos\AAD\RazorPages1\RazorPages1\bin\Debug\net6.0\RazorPages.Modelos.pdb
+D:\Salesianos\AAD\RazorPages1\RazorPages1\obj\Debug\net6.0\RazorPages1.csproj.AssemblyReference.cache
+D:\Salesianos\AAD\RazorPages1\RazorPages1\obj\Debug\net6.0\RazorPages1.csproj.CopyComplete
