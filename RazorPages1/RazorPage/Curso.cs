@@ -1,4 +1,4 @@
-﻿namespace RazorPage.Modelos
+﻿namespace RazorPages.Modelos
 {
     public enum Curso
     /*en un tipo enumerado se meten valores, metemos los cursos de informática. 

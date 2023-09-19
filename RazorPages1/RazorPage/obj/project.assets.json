@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPage\\RazorPage.Modelos.csproj",
-      "projectName": "RazorPage.Modelos",
-      "projectPath": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPage\\RazorPage.Modelos.csproj",
+      "projectUniqueName": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPage\\RazorPages.Modelos.csproj",
+      "projectName": "RazorPages.Modelos",
+      "projectPath": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPage\\RazorPages.Modelos.csproj",
       "packagesPath": "C:\\Users\\alber\\.nuget\\packages\\",
       "outputPath": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPage\\obj\\",
       "projectStyle": "PackageReference",
