@@ -4,3 +4,17 @@
 }
 <h1>Alumnos</h1>
 <h3>@Model.Alumnos.Count()</h3><!--ponemos la arroba para trabajar con ASP-->
+<div class="card-deck">
+    @foreach(var alumno in Model.Alumnos)
+    {
+        <div class="card m-3" style="min-width: 18rem; max-width:30%">
+            <div class="card-header">
+                <h3>@alumno.Nombre</h3>
+            </div>
+            <div>
+                <img src="~/images/@alumno.Foto">
+            </div>
+
+        </div>
+    }
+</div>

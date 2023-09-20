@@ -13,6 +13,30 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages1\\wwwroot\\images\\Alberto.jpg",
+      "PackagePath": "staticwebassets\\images\\Alberto.jpg"
+    },
+    {
+      "Id": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages1\\wwwroot\\images\\Isma1.jpg",
+      "PackagePath": "staticwebassets\\images\\Isma1.jpg"
+    },
+    {
+      "Id": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages1\\wwwroot\\images\\Ismael2.jpg",
+      "PackagePath": "staticwebassets\\images\\Ismael2.jpg"
+    },
+    {
+      "Id": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages1\\wwwroot\\images\\Jesus.jpg",
+      "PackagePath": "staticwebassets\\images\\Jesus.jpg"
+    },
+    {
+      "Id": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages1\\wwwroot\\images\\Mikel.jpg",
+      "PackagePath": "staticwebassets\\images\\Mikel.jpg"
+    },
+    {
+      "Id": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages1\\wwwroot\\images\\Nacho.jpg",
+      "PackagePath": "staticwebassets\\images\\Nacho.jpg"
+    },
+    {
       "Id": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages1\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

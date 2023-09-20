@@ -24,7 +24,7 @@ namespace RazorPages.Service
                     Id=1,
                     Nombre="Alberto Saz",
                     Email="saz@zaragoza.salesianos.edu",
-                    Foto="saz.jpg",
+                    Foto="Alberto.jpg",
                     CursoId = Curso.H2
                 },
                 new Alumno()
@@ -32,7 +32,7 @@ namespace RazorPages.Service
                     Id=2,
                     Nombre="Jesús Montero",
                     Email="montero@zaragoza.salesianos.edu",
-                    Foto="montero.jpg",
+                    Foto="Jesus.jpg",
                     CursoId = Curso.H2
                 },
                 new Alumno()
@@ -40,7 +40,7 @@ namespace RazorPages.Service
                     Id=3,
                     Nombre="Ismael Bernad",
                     Email="bernad@zaragoza.salesianos.edu",
-                    Foto="bernad.jpg",
+                    Foto="Ismael2.jpg",
                     CursoId = Curso.H1
                 },
                 new Alumno()
@@ -48,7 +48,7 @@ namespace RazorPages.Service
                     Id=4,
                     Nombre="Ismael Abed",
                     Email="abed@zaragoza.salesianos.edu",
-                    Foto="abed.jpg",
+                    Foto="Isma1.jpg",
                     CursoId = Curso.H1
                 }
             };
