@@ -1,7 +1,12 @@
+using RazorPages.Service;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+//incorporamos una linea para relacionar el interfaz IAlumnoRepositorio y la clase AlumnoRepositorio
+builder.Services.AddSingleton<IAlumnoRepositorio, AlumnoRepositorio>();
 
 var app = builder.Build();
 
