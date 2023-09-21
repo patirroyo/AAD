@@ -1,86 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages.Service\\RazorPages.Service.csproj": {}
+    "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages.Service/RazorPages.Service.csproj": {}
   },
   "projects": {
-    "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages.Service\\RazorPages.Service.csproj": {
+    "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPage/RazorPages.Modelos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages.Service\\RazorPages.Service.csproj",
-        "projectName": "RazorPages.Service",
-        "projectPath": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages.Service\\RazorPages.Service.csproj",
-        "packagesPath": "C:\\Users\\alber\\.nuget\\packages\\",
-        "outputPath": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPages.Service\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\alber\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "D:\\Salesianos\\AAD\\RazorPages1\\RazorPage\\RazorPages.Modelos.csproj": {
-                "projectPath": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPage\\RazorPages.Modelos.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Salesianos\\AAD\\RazorPages1\\RazorPage\\RazorPages.Modelos.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPage\\RazorPages.Modelos.csproj",
+        "projectUniqueName": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPage/RazorPages.Modelos.csproj",
         "projectName": "RazorPages.Modelos",
-        "projectPath": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPage\\RazorPages.Modelos.csproj",
-        "packagesPath": "C:\\Users\\alber\\.nuget\\packages\\",
-        "outputPath": "D:\\Salesianos\\AAD\\RazorPages1\\RazorPage\\obj\\",
+        "projectPath": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPage/RazorPages.Modelos.csproj",
+        "packagesPath": "/Users/alberto/.nuget/packages/",
+        "outputPath": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPage/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\alber\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/alberto/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -114,7 +54,65 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.308/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages.Service/RazorPages.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages.Service/RazorPages.Service.csproj",
+        "projectName": "RazorPages.Service",
+        "projectPath": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages.Service/RazorPages.Service.csproj",
+        "packagesPath": "/Users/alberto/.nuget/packages/",
+        "outputPath": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages.Service/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alberto/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPage/RazorPages.Modelos.csproj": {
+                "projectPath": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPage/RazorPages.Modelos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.308/RuntimeIdentifierGraph.json"
         }
       }
     }
