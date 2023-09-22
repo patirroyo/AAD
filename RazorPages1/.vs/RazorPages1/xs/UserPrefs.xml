@@ -1,20 +1,33 @@
 ﻿<Properties StartupConfiguration="{1AFED0B9-AB14-4857-BEAA-2692D0B9DAE3}|Default">
-  <MonoDevelop.Ide.ItemProperties.RazorPages1 PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.RazorPages1 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RazorPages1/Pages/Alumnos/Index.cshtml">
+    <Files>
+      <File FileName="RazorPages1/Pages/Alumnos/Index.cshtml" Line="24" Column="6" />
+      <File FileName="RazorPages1/Pages/Index.cshtml" />
+      <File FileName="RazorPages1/Pages/Shared/_Layout.cshtml" />
+      <File FileName="RazorPages1/wwwroot/css/site.css" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="RazorPages1" expanded="True" selected="True">
+          <Node name="RazorPages1">
             <Node name="RazorPages.Modelos" expanded="True" />
             <Node name="RazorPages.Service" expanded="True" />
             <Node name="RazorPages1" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Alumnos" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+                <Node name="Shared" expanded="True" />
+              </Node>
               <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
                 <Node name="images" expanded="True" />
               </Node>
             </Node>

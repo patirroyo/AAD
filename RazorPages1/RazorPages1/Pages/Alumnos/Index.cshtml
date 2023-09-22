@@ -14,10 +14,11 @@
             <div class="card-header">
                 <h3>@alumno.Nombre</h3>
             </div>
-            <div>
-                <img class="card-img-top imageThumbail"
-                        asp-append-version="true"
-                        src="@photo">
+            <img class="card-img-top imageThumbail" asp-append-version="true" src="@photo">
+            <div class="card-footer text-center">
+                <a asp-page="/Alumnos/Details" asp-route-ID="@alumno.Id" class="btn btn-primary m1">View</a>
+                <a href="#" class="btn btn-primary m-1">Edit</a>
+                <a href="#" class="btn btn-danger m-1">Erase</a>
             </div>
 
         </div>
