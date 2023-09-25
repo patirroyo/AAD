@@ -16,6 +16,7 @@
             </div>
             <img class="card-img-top imageThumbail" asp-append-version="true" src="@photo">
             <div class="card-footer text-center">
+                <!--Aquí creamos un enlace a la pagina de detalles, pasándole un entero con la identificación del alumno-->
                 <a asp-page="/Alumnos/Details" asp-route-ID="@alumno.Id" class="btn btn-primary m1">View</a>
                 <a href="#" class="btn btn-primary m-1">Edit</a>
                 <a href="#" class="btn btn-danger m-1">Erase</a>

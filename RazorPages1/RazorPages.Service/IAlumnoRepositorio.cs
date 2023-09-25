@@ -18,5 +18,7 @@ namespace RazorPages.Service
         //vamos a crear un método que devuelva todos los alumnos y los devuelva en una lista, en este caso 
         //utilizamos la clase IEnumerable, actúa como la clase list
         IEnumerable<Alumno> GetAllAlumnos();
+        //Aquí vamos a crear un método para que nos devuelva un objeto de la clase Alumno cuando le pases un entero
+        Alumno GetAlumnoById(int id);
     }
 }

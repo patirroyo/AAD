@@ -1,17 +1,13 @@
 ﻿<Properties StartupConfiguration="{1AFED0B9-AB14-4857-BEAA-2692D0B9DAE3}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.RazorPages1 PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RazorPages1/Pages/Alumnos/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RazorPages1/Pages/Alumnos/Details.cshtml.cs">
     <Files>
-      <File FileName="RazorPages1/Pages/Alumnos/Index.cshtml" Line="24" Column="6" />
-      <File FileName="RazorPages1/Pages/Index.cshtml" />
-      <File FileName="RazorPages1/Pages/Shared/_Layout.cshtml" />
-      <File FileName="RazorPages1/wwwroot/css/site.css" />
+      <File FileName="RazorPages1/Pages/Alumnos/Index.cshtml" Line="19" Column="31" />
+      <File FileName="RazorPages1/Pages/Alumnos/Details.cshtml" Line="1" Column="1" />
+      <File FileName="RazorPages1/Pages/Alumnos/Details.cshtml.cs" Line="18" Column="13" />
+      <File FileName="RazorPages.Service/AlumnoRepositorio.cs" />
+      <File FileName="RazorPages.Service/IAlumnoRepositorio.cs" />
+      <File FileName="RazorPages1/Pages/Alumnos/Index.cshtml.cs" Line="21" Column="56" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,10 +15,13 @@
           <Node name="RazorPages1">
             <Node name="RazorPages.Modelos" expanded="True" />
             <Node name="RazorPages.Service" expanded="True" />
-            <Node name="RazorPages1" expanded="True">
-              <Node name="Pages" expanded="True">
-                <Node name="Alumnos" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
+            <Node name="RazorPages1">
+              <Node name="Pages">
+                <Node name="Alumnos">
+                  <Node name="Details.cshtml" expanded="True">
+                    <Node name="Details.cshtml.cs" selected="True" />
+                  </Node>
+                  <Node name="Index.cshtml" expanded="True" />
                 </Node>
                 <Node name="Shared" expanded="True" />
               </Node>
@@ -36,4 +35,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -60,5 +60,13 @@ namespace RazorPages.Service
              prácticamente es lo mismo
              */
         }
+        public Alumno GetAlumnoById(int id)
+        {
+            /*a es el operador lambda, es una especie de alias para manipular el 
+             * objeto a través del cual has llamado a la función. 
+             * en este caso ListaAlumnos
+             FirstOrDefault busca la primera ocurrencia*/
+            return ListaAlumnos.FirstOrDefault(a => a.Id.Equals(id));
+        }
     }
 }
