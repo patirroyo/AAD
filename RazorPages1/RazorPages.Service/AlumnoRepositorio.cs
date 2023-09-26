@@ -65,8 +65,13 @@ namespace RazorPages.Service
             /*a es el operador lambda, es una especie de alias para manipular el 
              * objeto a través del cual has llamado a la función. 
              * en este caso ListaAlumnos
-             FirstOrDefault busca la primera ocurrencia*/
+             * FirstOrDefault busca la primera ocurrencia
+             * Esta forma de trabajar se llama modo predicado*/
             return ListaAlumnos.FirstOrDefault(a => a.Id.Equals(id));
+        }
+        public Alumno Update(Alumno alumnoActualizado)
+        {
+            return ListaAlumnos.FirstOrDefault(a => a.Id.Equals(alumnoActualizado.Id));
         }
     }
 }

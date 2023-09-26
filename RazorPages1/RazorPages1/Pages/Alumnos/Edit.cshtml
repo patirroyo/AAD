@@ -1,0 +1,47 @@
+﻿@page
+@model RazorPages1.Pages.Alumnos.EditModel
+@{
+
+//usamos Model.alumno para acceder al objeto alumno que está dentro de la clase
+var photo = "~/images/" + (Model.alumno.Foto ?? "noimage.jpg");
+}
+
+<h1 align="center"> Edición datos alumno</h1>
+<form method="post" class="mt-3">
+    <!--se suele utilizar el método POST-->
+    <input type="hidden" asp-for="alumno.Id" />
+    <div class="form-group row">
+        <label asp-for="alumno.Nombre" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="alumno.Nombre" class="form-control" placeholder="Nombre" />
+            <span asp-validation-for="alumno.Nombre" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="alumno.Email" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="alumno.Email" class="form-control" placeholder="Email" />
+            <span asp-validation-for="alumno.Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="alumno.CursoId" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <select asp-for="alumno.CursoId" class="form-select mb-3" asp-items="Html.GetEnumSelectList<Curso>()"><!--Añadido el using en _ViewImports.cshtml-->
+                <option value="Selecciona uno">Selecciona uno</option>
+            </select>
+            <span asp-validation-for="alumno.CursoId" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a asp-page="/Alumnos/Index" class="btn btn-promary">Cancel</a>
+        </div>
+    </div>
+
+
+
+
+</form>
+
