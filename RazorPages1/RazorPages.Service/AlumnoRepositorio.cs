@@ -67,11 +67,15 @@ namespace RazorPages.Service
              * en este caso ListaAlumnos
              * FirstOrDefault busca la primera ocurrencia
              * Esta forma de trabajar se llama modo predicado*/
-            return ListaAlumnos.FirstOrDefault(a => a.Id.Equals(id));
+            return ListaAlumnos.FirstOrDefault(a => a.Id == id);
         }
-        public Alumno Update(Alumno alumnoActualizado)
+        public void Update(Alumno alumnoActualizado)
         {
-            return ListaAlumnos.FirstOrDefault(a => a.Id.Equals(alumnoActualizado.Id));
+            Alumno alumno = ListaAlumnos.FirstOrDefault(a => a.Id == alumnoActualizado.Id);
+            alumno.Nombre = alumnoActualizado.Nombre;
+            alumno.Email = alumnoActualizado.Email;
+            alumno.CursoId = alumnoActualizado.CursoId;
+            
         }
     }
 }

@@ -19,12 +19,17 @@ namespace RazorPages1.Pages.Alumnos
         {
             this.alumnoRepositorio = alumnoRepositorio;
         }
-
+        //se ejecuta siempre al cargar la página con el get
         public void OnGet(int id)
         {
             alumno = alumnoRepositorio.GetAlumnoById(id);
-
-
+        }
+        //cuando demos al botón de submit se ejecutará éste metodo
+        //en vez de void, va a devolver una acción
+        public IActionResult OnPost(Alumno alumno)
+        {
+            alumnoRepositorio.Update(alumno);
+            return RedirectToPage("Index");
         }
     }
 }

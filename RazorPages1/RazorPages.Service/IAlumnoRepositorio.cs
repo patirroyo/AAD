@@ -21,6 +21,6 @@ namespace RazorPages.Service
         //Aquí vamos a crear un método para que nos devuelva un objeto de la clase Alumno cuando le pases un entero
         Alumno GetAlumnoById(int id);
         //Una función que guarde los cambios del alumno
-        Alumno Update(Alumno alumnoActualizado);
+        void Update(Alumno alumnoActualizado);
     }
 }
