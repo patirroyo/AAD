@@ -1,35 +1,27 @@
 ﻿<Properties StartupConfiguration="{1AFED0B9-AB14-4857-BEAA-2692D0B9DAE3}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.RazorPages1 PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RazorPages.Service/AlumnoRepositorio.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RazorPages1/Pages/Alumnos/Edit.cshtml.cs">
     <Files>
       <File FileName="RazorPages1/Pages/Alumnos/Index.cshtml" />
-      <File FileName="RazorPages1/Pages/Alumnos/Index.cshtml.cs" Line="1" Column="1" />
-      <File FileName="RazorPages1/Pages/Alumnos/Details.cshtml" Line="1" Column="1" />
-      <File FileName="RazorPages1/Pages/Alumnos/Details.cshtml.cs" Line="1" Column="1" />
-      <File FileName="RazorPages.Service/IAlumnoRepositorio.cs" Line="1" Column="1" />
-      <File FileName="RazorPages.Service/AlumnoRepositorio.cs" Line="82" Column="1" />
-      <File FileName="RazorPages1/Pages/Alumnos/Edit.cshtml" Line="10" Column="34" />
-      <File FileName="RazorPages1/Pages/Alumnos/Edit.cshtml.cs" Line="32" Column="41" />
+      <File FileName="RazorPages1/Pages/Alumnos/Index.cshtml.cs" />
+      <File FileName="RazorPages1/Pages/Alumnos/Details.cshtml" />
+      <File FileName="RazorPages1/Pages/Alumnos/Details.cshtml.cs" />
+      <File FileName="RazorPages.Service/IAlumnoRepositorio.cs" Line="26" Column="2" />
+      <File FileName="RazorPages.Service/AlumnoRepositorio.cs" Line="78" Column="13" />
+      <File FileName="RazorPages1/Pages/Alumnos/Edit.cshtml" Line="9" Column="5" />
+      <File FileName="RazorPages1/Pages/Alumnos/Edit.cshtml.cs" Line="31" Column="46" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="RazorPages1" expanded="True">
             <Node name="RazorPages.Modelos" expanded="True" />
-            <Node name="RazorPages.Service">
-              <Node name="AlumnoRepositorio.cs" selected="True" />
-            </Node>
-            <Node name="RazorPages1">
-              <Node name="Pages">
-                <Node name="Alumnos">
-                  <Node name="Details.cshtml" expanded="True" />
-                  <Node name="Index.cshtml" expanded="True" />
+            <Node name="RazorPages.Service" expanded="True" />
+            <Node name="RazorPages1" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Alumnos" expanded="True">
+                  <Node name="Edit.cshtml" expanded="True">
+                    <Node name="Edit.cshtml.cs" selected="True" />
+                  </Node>
                 </Node>
               </Node>
             </Node>
@@ -38,4 +30,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.RazorPages1 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

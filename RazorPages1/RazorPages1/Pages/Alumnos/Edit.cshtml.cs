@@ -11,9 +11,14 @@ namespace RazorPages1.Pages.Alumnos
 {
     public class EditModel : PageModel
     {
-        public Alumno alumno { get; set; }
+
         //declaramos un atributo de clase de la clase IAlumnoRepositorio para poder llamar al método GetAlumnoById
         private readonly IAlumnoRepositorio alumnoRepositorio;
+
+        public Alumno alumno { get; set; }
+
+        //el atributo Photo de la clase IFormFile que es diferente del atributo Foto de la clase Alumno
+        public IFormFile Photo { get; set; }
 
         public EditModel(IAlumnoRepositorio alumnoRepositorio)
         {
@@ -26,9 +31,10 @@ namespace RazorPages1.Pages.Alumnos
         }
         //cuando demos al botón de submit se ejecutará éste metodo
         //en vez de void, va a devolver una acción
-        public IActionResult OnPost(Alumno alumno)
+        public IActionResult OnPost(Alumno alumno, IFormFile Photo)
         {
             alumnoRepositorio.Update(alumno);
+            alumno.Foto = Photo.FileName;
             return RedirectToPage("Index");
         }
     }
