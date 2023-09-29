@@ -31,10 +31,9 @@ namespace RazorPages1.Pages.Alumnos
         }
         //cuando demos al botón de submit se ejecutará éste metodo
         //en vez de void, va a devolver una acción
-        public IActionResult OnPost(Alumno alumno, IFormFile Photo)
+        public IActionResult OnPost(Alumno alumno)
         {
             alumnoRepositorio.Update(alumno);
-            alumno.Foto = Photo.FileName;
             return RedirectToPage("Index");
         }
     }
