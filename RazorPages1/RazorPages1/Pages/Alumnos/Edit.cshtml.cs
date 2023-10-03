@@ -19,10 +19,12 @@ namespace RazorPages1.Pages.Alumnos
 
         //el atributo Photo de la clase IFormFile que es diferente del atributo Foto de la clase Alumno
         public IFormFile Photo { get; set; }
+        public IWebHostEnvironment WebHostEnvironment { get; }//en el destornillador crear y asignar la propiedad
 
-        public EditModel(IAlumnoRepositorio alumnoRepositorio)
+        public EditModel(IAlumnoRepositorio alumnoRepositorio, IWebHostEnvironment webHostEnvironment)
         {
             this.alumnoRepositorio = alumnoRepositorio;
+            WebHostEnvironment = webHostEnvironment;
         }
         //se ejecuta siempre al cargar la página con el get
         public void OnGet(int id)
@@ -33,6 +35,16 @@ namespace RazorPages1.Pages.Alumnos
         //en vez de void, va a devolver una acción
         public IActionResult OnPost(Alumno alumno)
         {
+            if (Photo != null)
+            {
+                //necesitamos un objeto de una clase que sea capaz de manipular el proyecto por lo que la creamos en el constructor
+                string uploadsFolder = Path.Combine(WebHostEnvironment.WebRootPath, "/images");//lo primero nos devuelve el path a wwwroot
+                string filePath = Path.Combine(uploadsFolder, Photo.FileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    Photo.CopyTo(fileStream);
+                }
+            }
             alumnoRepositorio.Update(alumno);
             return RedirectToPage("Index");
         }
