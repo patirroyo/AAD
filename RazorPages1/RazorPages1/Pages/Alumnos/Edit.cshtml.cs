@@ -37,16 +37,29 @@ namespace RazorPages1.Pages.Alumnos
         {
             if (Photo != null)
             {
-                //necesitamos un objeto de una clase que sea capaz de manipular el proyecto por lo que la creamos en el constructor
-                string uploadsFolder = Path.Combine(WebHostEnvironment.WebRootPath, "/images");//lo primero nos devuelve el path a wwwroot
-                string filePath = Path.Combine(uploadsFolder, Photo.FileName);
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    Photo.CopyTo(fileStream);
+                    if(alumno.Foto != null)
+                    {
+                        string filePath = Path.Combine(WebHostEnvironment.WebRootPath, "images", alumno.Foto);
+                        System.IO.File.Delete(filePath);
+                    }
                 }
+                alumno.Foto = ProcessUploadedFile();
             }
             alumnoRepositorio.Update(alumno);
             return RedirectToPage("Index");
+        }
+
+        private string ProcessUploadedFile()
+        {
+            //necesitamos un objeto de una clase que sea capaz de manipular el proyecto por lo que la creamos en el constructor
+            string uploadsFolder = Path.Combine(WebHostEnvironment.WebRootPath, "images");//lo primero nos devuelve el path a wwwroot
+            string filePath = Path.Combine(uploadsFolder, Photo.FileName);
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                Photo.CopyTo(fileStream);
+            }
+            return Photo.FileName;
         }
     }
 }

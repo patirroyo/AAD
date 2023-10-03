@@ -11,4 +11,7 @@
     <ProjectReference Include="..\RazorPage\RazorPages.Modelos.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\images\Alberto.jpg" />
+  </ItemGroup>
 </Project>
