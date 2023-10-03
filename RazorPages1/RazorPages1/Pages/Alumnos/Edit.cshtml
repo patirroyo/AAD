@@ -61,7 +61,13 @@ var photo = "~/images/" + (Model.alumno.Foto ?? "noimage.jpg");
 @section Scripts{
     <script>
         $(document).ready(function () {
-
+            $('.custom-file-input').on("change", function () {
+                //este objeto (custom-file-input), su valor concatena con \\
+                //y pop que es de jquery extrae de la pila algo que agustín no tiene muy claro
+                var fileName = $(this).val().split("\\").pop();
+                //al siguiente objeto label de estos le pones el fileName
+                $(this).next('.custom-file-label').html(fileName);
+            })
         })
     </script>
 
