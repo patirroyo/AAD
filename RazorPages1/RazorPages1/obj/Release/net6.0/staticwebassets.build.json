@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aa3LElcfbAnKEZOgybpAsKwqyal758lSuxvawpfbTVQ=",
+  "Hash": "WfFThO+5a+j84RTtQVxm2twww5+Aw7X3nQj/6s48CVA=",
   "Source": "RazorPages1",
   "BasePath": "_content/RazorPages1",
   "Mode": "Default",
@@ -119,6 +119,23 @@
       "OriginalItemSpec": "wwwroot/images/.DS_Store"
     },
     {
+      "Identity": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/Alberto.jpg",
+      "SourceId": "RazorPages1",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/",
+      "BasePath": "_content/RazorPages1",
+      "RelativePath": "images/Alberto.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/Alberto.jpg"
+    },
+    {
       "Identity": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/Isma1.jpg",
       "SourceId": "RazorPages1",
       "SourceType": "Discovered",
@@ -168,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/Jesus.jpg"
+    },
+    {
+      "Identity": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/Mikel.jpg",
+      "SourceId": "RazorPages1",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/",
+      "BasePath": "_content/RazorPages1",
+      "RelativePath": "images/Mikel.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/Mikel.jpg"
     },
     {
       "Identity": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/noimage.jpg",

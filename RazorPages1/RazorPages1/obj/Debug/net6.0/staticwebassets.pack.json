@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets/RazorPages1.bundle.scp.css"
     },
     {
+      "Id": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
       "Id": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
       "Id": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/.DS_Store",
+      "PackagePath": "staticwebassets/images/.DS_Store"
     },
     {
       "Id": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/Alberto.jpg",

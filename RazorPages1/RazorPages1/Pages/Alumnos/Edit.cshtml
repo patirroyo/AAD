@@ -1,12 +1,14 @@
 ﻿@page
 @model RazorPages1.Pages.Alumnos.EditModel
 @{
+    //Antes de abrirse la página se ejecuta el controlador (Edit.cshtml.cs)
+    //usamos Model.alumno para acceder al objeto alumno que está dentro de la clase
+    var photo = "~/images/" + (Model.alumno.Foto ?? "noimage.jpg");
+    var titulo = Model.alumno.Id > 0 ? "Edición datos " : "Creación ";
 
-//usamos Model.alumno para acceder al objeto alumno que está dentro de la clase
-var photo = "~/images/" + (Model.alumno.Foto ?? "noimage.jpg");
 }
 
-<h1 align="center"> Edición datos alumno</h1>
+<h1 align="center"> @titulo de alumno</h1>
 <form method="post" class="mt-3" enctype="multipart/form-data">
     <!--hay que añadir el tipo de encriptamiento-->
     <!--se suele utilizar el método POST-->

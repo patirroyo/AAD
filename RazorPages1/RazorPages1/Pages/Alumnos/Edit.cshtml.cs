@@ -11,7 +11,6 @@ namespace RazorPages1.Pages.Alumnos
 {
     public class EditModel : PageModel
     {
-
         //declaramos un atributo de clase de la clase IAlumnoRepositorio para poder llamar al método GetAlumnoById
         private readonly IAlumnoRepositorio alumnoRepositorio;
 
@@ -26,10 +25,20 @@ namespace RazorPages1.Pages.Alumnos
             this.alumnoRepositorio = alumnoRepositorio;
             WebHostEnvironment = webHostEnvironment;
         }
-        //se ejecuta siempre al cargar la página con el get
-        public void OnGet(int id)
+        //se ejecuta siempre al cargar la página a no ser que se haya espeficado que se envían los parámetros con el post
+        //le decimos que puede recibir o no un int
+        public void OnGet(int? id)
         {
-            alumno = alumnoRepositorio.GetAlumnoById(id);
+            if (id.HasValue)
+            {
+                //para que no de error, porque id no sabemos lo que es, le decimos que coja el valor
+                alumno = alumnoRepositorio.GetAlumnoById(id.Value);
+            }
+            else
+            {
+                alumno = new Alumno();
+            }
+                
         }
         //cuando demos al botón de submit se ejecutará éste metodo
         //en vez de void, va a devolver una acción
@@ -46,7 +55,10 @@ namespace RazorPages1.Pages.Alumnos
                 }
                 alumno.Foto = ProcessUploadedFile();
             }
-            alumnoRepositorio.Update(alumno);
+            if (alumno.Id != 0)
+                alumnoRepositorio.Update(alumno);
+            else
+                alumnoRepositorio.Add(alumno);
             return RedirectToPage("Index");
         }
 

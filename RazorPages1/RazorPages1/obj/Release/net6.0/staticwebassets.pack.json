@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets/images/.DS_Store"
     },
     {
+      "Id": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/Alberto.jpg",
+      "PackagePath": "staticwebassets/images/Alberto.jpg"
+    },
+    {
       "Id": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/Isma1.jpg",
       "PackagePath": "staticwebassets/images/Isma1.jpg"
     },
@@ -31,6 +35,10 @@
     {
       "Id": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/Jesus.jpg",
       "PackagePath": "staticwebassets/images/Jesus.jpg"
+    },
+    {
+      "Id": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/Mikel.jpg",
+      "PackagePath": "staticwebassets/images/Mikel.jpg"
     },
     {
       "Id": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/noimage.jpg",

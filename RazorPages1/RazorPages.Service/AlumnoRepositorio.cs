@@ -78,5 +78,11 @@ namespace RazorPages.Service
             alumno.Foto = alumnoActualizado.Foto;
             
         }
+        public void Add(Alumno alumnoNuevo)
+        {
+            alumnoNuevo.Id = ListaAlumnos.Max(a => a.Id) + 1;
+            ListaAlumnos.Add(alumnoNuevo);
+        }
+
     }
 }

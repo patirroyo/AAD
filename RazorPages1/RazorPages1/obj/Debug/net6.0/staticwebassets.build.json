@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZJG/32aheLxk33363Kll7ImsXfS+eV+O+AZ/TONSt8Q=",
+  "Hash": "sSGJQrsyo2iUR1cCZgwfVvVV3WIDVytRSEwtc0oMq9I=",
   "Source": "RazorPages1",
   "BasePath": "_content/RazorPages1",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/obj/Debug/net6.0/scopedcss/projectbundle/RazorPages1.bundle.scp.css"
     },
     {
+      "Identity": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/.DS_Store",
+      "SourceId": "RazorPages1",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/",
+      "BasePath": "_content/RazorPages1",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
+    },
+    {
       "Identity": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/css/site.css",
       "SourceId": "RazorPages1",
       "SourceType": "Discovered",
@@ -83,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/.DS_Store",
+      "SourceId": "RazorPages1",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/",
+      "BasePath": "_content/RazorPages1",
+      "RelativePath": "images/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/.DS_Store"
     },
     {
       "Identity": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/Alberto.jpg",
