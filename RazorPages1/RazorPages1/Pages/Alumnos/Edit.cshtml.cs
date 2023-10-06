@@ -27,7 +27,7 @@ namespace RazorPages1.Pages.Alumnos
         }
         //se ejecuta siempre al cargar la página a no ser que se haya espeficado que se envían los parámetros con el post
         //le decimos que puede recibir o no un int
-        public void OnGet(int? id)
+        public IActionResult OnGet(int? id)
         {
             if (id.HasValue)
             {
@@ -38,7 +38,7 @@ namespace RazorPages1.Pages.Alumnos
             {
                 alumno = new Alumno();
             }
-                
+            return Page();   
         }
         //cuando demos al botón de submit se ejecutará éste metodo
         //en vez de void, va a devolver una acción
