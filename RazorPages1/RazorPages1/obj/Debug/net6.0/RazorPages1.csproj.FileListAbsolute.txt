@@ -70,3 +70,6 @@ D:/Salesianos/AAD/RazorPages1/RazorPages1/obj/Debug/net6.0/RazorPages1.csproj.Co
 /Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/obj/Debug/net6.0/RazorPages1.pdb
 /Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/obj/Debug/net6.0/RazorPages1.genruntimeconfig.cache
 /Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/obj/Debug/net6.0/ref/RazorPages1.dll
+/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/bin/Debug/net6.0/Microsoft.DotNet.PlatformAbstractions.dll
+/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/bin/Debug/net6.0/Microsoft.Extensions.DependencyModel.dll
+/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/bin/Debug/net6.0/Newtonsoft.Json.dll

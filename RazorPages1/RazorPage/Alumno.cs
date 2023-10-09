@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace RazorPages.Modelos
 {
+
     public class Alumno //internal es un modificador que equivale al modificador private de Java, por lo que lo cambiamos a public
     {
         public int Id { get; set; }

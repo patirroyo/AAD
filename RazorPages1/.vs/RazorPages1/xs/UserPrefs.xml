@@ -1,9 +1,5 @@
 ﻿<Properties StartupConfiguration="{1AFED0B9-AB14-4857-BEAA-2692D0B9DAE3}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RazorPages1/Pages/Alumnos/Edit.cshtml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RazorPage/Alumno.cs">
     <Files>
       <File FileName="RazorPages1/Pages/Alumnos/Index.cshtml" />
       <File FileName="RazorPages1/Pages/Alumnos/Index.cshtml.cs" />
@@ -11,14 +7,27 @@
       <File FileName="RazorPages1/Pages/Alumnos/Details.cshtml.cs" />
       <File FileName="RazorPages.Service/IAlumnoRepositorio.cs" />
       <File FileName="RazorPages.Service/AlumnoRepositorio.cs" />
-      <File FileName="RazorPages1/Pages/Alumnos/Edit.cshtml" />
-      <File FileName="RazorPages1/Pages/Alumnos/Edit.cshtml.cs" Line="26" Column="43" />
-      <File FileName="RazorPage/Alumno.cs" />
+      <File FileName="RazorPages1/Pages/Alumnos/Edit.cshtml" Line="21" Column="131" />
+      <File FileName="RazorPages1/Pages/Alumnos/Edit.cshtml.cs" Line="41" Column="27" />
+      <File FileName="RazorPage/Alumno.cs" Line="6" Column="30" />
       <File FileName="RazorPages1/Pages/_ViewImports.cshtml" />
       <File FileName="RazorPages1/Pages/Shared/_Layout.cshtml" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RazorPages1" expanded="True">
+            <Node name="RazorPages.Modelos" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.RazorPages1 PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.RazorPages1 PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
 </Properties>

@@ -54,13 +54,10 @@
             <a asp-page="/Alumnos/Index" class="btn btn-promary">Cancel</a>
         </div>
     </div>
-
-
-
-
 </form>
 
 @section Scripts{
+    <!--<partial name="_ValidationScriptsPartial" /> <!--Esta linea es para que coja las validaciones en el lado del cliente, no es lo mejor-->
     <script>
         $(document).ready(function () {
             $('.custom-file-input').on("change", function () {

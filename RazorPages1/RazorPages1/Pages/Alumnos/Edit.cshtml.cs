@@ -13,12 +13,15 @@ namespace RazorPages1.Pages.Alumnos
     {
         //declaramos un atributo de clase de la clase IAlumnoRepositorio para poder llamar al método GetAlumnoById
         private readonly IAlumnoRepositorio alumnoRepositorio;
+        public IWebHostEnvironment WebHostEnvironment { get; }//en el destornillador crear y asignar la propiedad
 
+        [BindProperty]//esto permite que se actualice
         public Alumno alumno { get; set; }
 
         //el atributo Photo de la clase IFormFile que es diferente del atributo Foto de la clase Alumno
+        [BindProperty]
         public IFormFile Photo { get; set; }
-        public IWebHostEnvironment WebHostEnvironment { get; }//en el destornillador crear y asignar la propiedad
+        
 
         public EditModel(IAlumnoRepositorio alumnoRepositorio, IWebHostEnvironment webHostEnvironment)
         {
@@ -44,22 +47,26 @@ namespace RazorPages1.Pages.Alumnos
         //en vez de void, va a devolver una acción
         public IActionResult OnPost(Alumno alumno)
         {
-            if (Photo != null)
+            if (ModelState.IsValid)
             {
+                if (Photo != null)
                 {
-                    if(alumno.Foto != null)
                     {
-                        string filePath = Path.Combine(WebHostEnvironment.WebRootPath, "images", alumno.Foto);
-                        System.IO.File.Delete(filePath);
+                        if(alumno.Foto != null)
+                        {
+                            string filePath = Path.Combine(WebHostEnvironment.WebRootPath, "images", alumno.Foto);
+                            System.IO.File.Delete(filePath);
+                        }
                     }
+                    alumno.Foto = ProcessUploadedFile();
                 }
-                alumno.Foto = ProcessUploadedFile();
-            }
-            if (alumno.Id != 0)
-                alumnoRepositorio.Update(alumno);
-            else
-                alumnoRepositorio.Add(alumno);
-            return RedirectToPage("Index");
+                if (alumno.Id != 0)
+                    alumnoRepositorio.Update(alumno);
+                else
+                    alumnoRepositorio.Add(alumno);
+                return RedirectToPage("Index");
+            }else
+                return Page();
         }
 
         private string ProcessUploadedFile()
