@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets/images/Mikel.jpg"
     },
     {
+      "Id": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/Nacho.jpg",
+      "PackagePath": "staticwebassets/images/Nacho.jpg"
+    },
+    {
       "Id": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/noimage.jpg",
       "PackagePath": "staticwebassets/images/noimage.jpg"
     },

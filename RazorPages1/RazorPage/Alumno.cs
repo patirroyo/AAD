@@ -12,10 +12,13 @@ namespace RazorPages.Modelos
     {
         public int Id { get; set; }
 
-        [Required]//Esto es para que el nombre sea obligatorio
+        [Required(ErrorMessage ="Obligatorio completar el nombre")]//Esto es para que el nombre sea obligatorio
+        [MinLength(3, ErrorMessage ="El nombre deber tener un mínimo de 3 caracteres")]
         public string Nombre { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Obligatorio completar el mail")]
+        [RegularExpression(@"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$", ErrorMessage ="Email no valido")]
+        
         public string Email { get; set; }
         public string Foto { get; set; }
         public Curso? CursoId { get; set; } // a ese campo le puedes o no asignar un valor por el ? es decir, permite el null.

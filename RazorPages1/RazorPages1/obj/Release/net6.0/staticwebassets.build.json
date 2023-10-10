@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WfFThO+5a+j84RTtQVxm2twww5+Aw7X3nQj/6s48CVA=",
+  "Hash": "26mwSDBPAgzHHoHNVLcfOZZVGDtiO8wFeqpV5EHcYoU=",
   "Source": "RazorPages1",
   "BasePath": "_content/RazorPages1",
   "Mode": "Default",
@@ -202,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/Mikel.jpg"
+    },
+    {
+      "Identity": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/Nacho.jpg",
+      "SourceId": "RazorPages1",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/",
+      "BasePath": "_content/RazorPages1",
+      "RelativePath": "images/Nacho.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/Nacho.jpg"
     },
     {
       "Identity": "/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/wwwroot/images/noimage.jpg",

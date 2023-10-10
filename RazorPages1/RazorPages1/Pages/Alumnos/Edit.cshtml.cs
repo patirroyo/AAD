@@ -47,7 +47,7 @@ namespace RazorPages1.Pages.Alumnos
         //en vez de void, va a devolver una acción
         public IActionResult OnPost(Alumno alumno)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid)//si he rellenado todos los campos required
             {
                 if (Photo != null)
                 {

@@ -1,15 +1,22 @@
 ﻿<Properties StartupConfiguration="{1AFED0B9-AB14-4857-BEAA-2692D0B9DAE3}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.RazorPages1 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="RazorPage/Alumno.cs">
     <Files>
+      <File FileName="RazorPages1/Pages/Alumnos/Edit.cshtml.cs" Line="22" Column="23" IsPinned="True" />
+      <File FileName="RazorPages1/Pages/Alumnos/Edit.cshtml" Line="60" Column="9" IsPinned="True" />
       <File FileName="RazorPages1/Pages/Alumnos/Index.cshtml" />
       <File FileName="RazorPages1/Pages/Alumnos/Index.cshtml.cs" />
       <File FileName="RazorPages1/Pages/Alumnos/Details.cshtml" />
       <File FileName="RazorPages1/Pages/Alumnos/Details.cshtml.cs" />
       <File FileName="RazorPages.Service/IAlumnoRepositorio.cs" />
       <File FileName="RazorPages.Service/AlumnoRepositorio.cs" />
-      <File FileName="RazorPages1/Pages/Alumnos/Edit.cshtml" Line="21" Column="131" />
-      <File FileName="RazorPages1/Pages/Alumnos/Edit.cshtml.cs" Line="41" Column="27" />
-      <File FileName="RazorPage/Alumno.cs" Line="6" Column="30" />
+      <File FileName="RazorPage/Alumno.cs" Line="20" Column="41" />
       <File FileName="RazorPages1/Pages/_ViewImports.cshtml" />
       <File FileName="RazorPages1/Pages/Shared/_Layout.cshtml" />
     </Files>
@@ -18,16 +25,16 @@
         <State name="__root__">
           <Node name="RazorPages1" expanded="True">
             <Node name="RazorPages.Modelos" expanded="True" />
+            <Node name="RazorPages1" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Alumnos" expanded="True">
+                  <Node name="Edit.cshtml" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.RazorPages1 PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
 </Properties>
