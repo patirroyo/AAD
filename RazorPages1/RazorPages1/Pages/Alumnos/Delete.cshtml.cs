@@ -14,9 +14,11 @@ namespace RazorPages1.Pages.Alumnos
     {
         //declaramos un atributo de clase de la clase IAlumnoRepositorio para poder llamar al método GetAlumnoById
         private readonly IAlumnoRepositorio alumnoRepositorio;
-        public Alumno alumno;
-       
-        
+
+        [BindProperty]//esto permite que se actualice
+        public Alumno alumno { get; set; }
+
+
         public DeleteModel(IAlumnoRepositorio alumnoRepositorio, IWebHostEnvironment webHostEnvironment)
         {
             this.alumnoRepositorio = alumnoRepositorio;

@@ -5,22 +5,13 @@
 }
 
 
-<div class="card m-3" align="center" style="min-width: 12rem; max-width:80%">
-    <div class="card-header">
-        <h3>@Model.alumno.Nombre</h3>
-    </div>
-    <img width="150px" asp-append-version="true" src="@photo">
-    <div class="card-footer text-center">
-        <h3>Id: @Model.alumno.Id</h3>
-        <h3>Email: @Model.alumno.Email</h3>
-        <h3>Curso: @Model.alumno.CursoId</h3>
-    </div>
-    <div>
-        <form method="post" class="mt-3">
-            <input type="hidden" asp-for="alumno.Id" />
-            <button class="btn btn-danger m-1">Erase</button>
+<h1>Confirmación de borrado</h1>
+<div class="alert alert-danger">
+    <h5>Esás seguro de que quieres eliminar al alumno - @Model.alumno.Nombre</h5>
+        <form method="post">
+            <!--input type="hidden" asp-for="alumno.Id" /> No hace falta porque tenemos el BindProperty en alumno-->
+            <button type="submit" class="btn btn-danger">Si</button>
+            <a asp-page="/Alumnos/Index" class="btn btn-primary">No</a>
         </form>
-    </div>
-
 </div>
 
