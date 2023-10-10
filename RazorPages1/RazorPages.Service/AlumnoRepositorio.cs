@@ -83,6 +83,12 @@ namespace RazorPages.Service
             alumnoNuevo.Id = ListaAlumnos.Max(a => a.Id) + 1;
             ListaAlumnos.Add(alumnoNuevo);
         }
-
+        public Alumno Delete(int idBorrar)
+        {
+            Alumno alumnoBorrar = ListaAlumnos.Find(a => a.Id == idBorrar);
+            if(alumnoBorrar != null)
+                ListaAlumnos.Remove(alumnoBorrar);
+            return alumnoBorrar;
+        }
     }
 }

@@ -24,5 +24,7 @@ namespace RazorPages.Service
         void Update(Alumno alumnoActualizado);
         //un método que recibe un objeto de la clase alumno y lo insertará en la lista de alumnos
         void Add(Alumno alumnoNuevo);
+        //un método que reciba un objeto de la clase alumno y lo elimine de la lista
+        Alumno Delete(int idBorrar);
     }
 }

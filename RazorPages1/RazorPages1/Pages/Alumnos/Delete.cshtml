@@ -1,0 +1,26 @@
+﻿@page
+@model RazorPages1.Pages.Alumnos.DeleteModel
+@{
+    var photo = "~/images/" + (Model.alumno.Foto ?? "noimage.jpg");
+}
+
+
+<div class="card m-3" align="center" style="min-width: 12rem; max-width:80%">
+    <div class="card-header">
+        <h3>@Model.alumno.Nombre</h3>
+    </div>
+    <img width="150px" asp-append-version="true" src="@photo">
+    <div class="card-footer text-center">
+        <h3>Id: @Model.alumno.Id</h3>
+        <h3>Email: @Model.alumno.Email</h3>
+        <h3>Curso: @Model.alumno.CursoId</h3>
+    </div>
+    <div>
+        <form method="post" class="mt-3">
+            <input type="hidden" asp-for="alumno.Id" />
+            <button class="btn btn-danger m-1">Erase</button>
+        </form>
+    </div>
+
+</div>
+

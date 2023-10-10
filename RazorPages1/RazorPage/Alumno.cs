@@ -18,7 +18,7 @@ namespace RazorPages.Modelos
 
         [Required(ErrorMessage = "Obligatorio completar el mail")]
         [RegularExpression(@"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$", ErrorMessage ="Email no valido")]
-        
+        [Display(Name = "Email de casa")]//esto nos modifica el label
         public string Email { get; set; }
         public string Foto { get; set; }
         public Curso? CursoId { get; set; } // a ese campo le puedes o no asignar un valor por el ? es decir, permite el null.
