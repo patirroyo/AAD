@@ -11,4 +11,14 @@
     <ProjectReference Include="..\RazorPage\RazorPages.Modelos.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Components\" />
+    <None Remove="Pages\Shared\Components\" />
+    <None Remove="Pages\Shared\Components\AlumnoCurso\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Components\" />
+    <Folder Include="Pages\Shared\Components\" />
+    <Folder Include="Pages\Shared\Components\AlumnoCurso\" />
+  </ItemGroup>
 </Project>

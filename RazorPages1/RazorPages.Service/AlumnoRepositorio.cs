@@ -90,5 +90,17 @@ namespace RazorPages.Service
                 ListaAlumnos.Remove(alumnoBorrar);
             return alumnoBorrar;
         }
+
+        public IEnumerable<CursoCuantos> AlumnosPorCurso()
+        {
+            //modo predicado, a es el alias del objeto sobre el que actúa el método
+            return ListaAlumnos.GroupBy(a => a.CursoId)
+                .Select(g => new CursoCuantos()//g es por el aGrupamiento
+                {//hacemos una consulta Select por cada agrupamiento en la que creamos un objeto CursoCuantos
+                    Clase = g.Key.Value,
+                    NumAlumnos = g.Count()
+                }).ToList();//el resultado lo convertimos en lista
+          
+        }
     }
 }
