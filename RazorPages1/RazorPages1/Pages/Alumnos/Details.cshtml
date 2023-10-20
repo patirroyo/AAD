@@ -2,9 +2,12 @@
 @model RazorPages1.Pages.Alumnos.DetailsModel
 @{
     //usamos Model.alumno para acceder al objeto alumno que está dentro de la clase
-var photo = "~/images/" + (Model.alumno.Foto ?? "noimage.jpg");
+    var photo = "~/images/" + (Model.alumno.Foto ?? "noimage.jpg");
 }
-
+<div class="col-sm-8">
+    <!--await Component.InvokeAsync("AlumnosCursoContar")-->
+    @await Component.InvokeAsync("AlumnoCurso", new { curso = Model.alumno.CursoId })
+</div>
 
 <div class="card m-3" align="center" style="min-width: 12rem; max-width:80%">
     <div class="card-header">

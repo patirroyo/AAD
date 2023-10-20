@@ -91,10 +91,15 @@ namespace RazorPages.Service
             return alumnoBorrar;
         }
 
-        public IEnumerable<CursoCuantos> AlumnosPorCurso()
+        public IEnumerable<CursoCuantos> AlumnosPorCurso(Curso? curso)
         {
+            IEnumerable<Alumno> consulta = ListaAlumnos;
+            if (curso.HasValue)
+            {
+               consulta = consulta.Where(a => a.CursoId == curso).ToList();
+            }
             //modo predicado, a es el alias del objeto sobre el que actúa el método
-            return ListaAlumnos.GroupBy(a => a.CursoId)
+            return consulta.GroupBy(a => a.CursoId)
                 .Select(g => new CursoCuantos()//g es por el aGrupamiento
                 {//hacemos una consulta Select por cada agrupamiento en la que creamos un objeto CursoCuantos
                     Clase = g.Key.Value,
