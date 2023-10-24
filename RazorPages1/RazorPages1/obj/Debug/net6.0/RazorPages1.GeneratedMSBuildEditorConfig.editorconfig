@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/Pages/Alumnos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWx1bW5vcy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/Pages/Alumnos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWx1bW5vcy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/Pages/Shared/Components/AlumnoCurso/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL0NvbXBvbmVudHMvQWx1bW5vQ3Vyc28vRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/alberto/gitSalesianos/AAD/RazorPages1/RazorPages1/Pages/Shared/_ValidationScriptsPartial.cshtml]
