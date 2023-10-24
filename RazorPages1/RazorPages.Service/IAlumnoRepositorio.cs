@@ -30,5 +30,7 @@ namespace RazorPages.Service
         IEnumerable<CursoCuantos> AlumnosPorCurso(Curso? curso);
         //un método para el get para que busque
         IEnumerable<Alumno> FindAlumnos(string elementoABuscar);
+
+        IEnumerable<Alumno> FindAlumnosByCurso(Curso elementoABuscar);
     }
 }
