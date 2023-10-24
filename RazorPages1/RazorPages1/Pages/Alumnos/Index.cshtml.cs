@@ -17,7 +17,7 @@ namespace RazorPages1.Pages.Alumnos
         //un objeto de esa clase para poder llamarlo.
 
 
-        [BindProperty(SupportsGet = true)]//lo relacionamos con el de la pagina web "elementoAMostrar"
+        //[BindProperty(SupportsGet = true)]//lo relacionamos con el de la pagina web "elementoAMostrar" ahora lo hacemos sin ello
         public string elementoABuscar { get; set; } 
         
 
@@ -28,7 +28,7 @@ namespace RazorPages1.Pages.Alumnos
             * que sin llamar explicitamente a los métodos constructores
             * se creen */
         }
-        public void OnGet()
+        public void OnGet(string elementoABuscar = "")
         {
             Alumnos = alumnoRepositorio.FindAlumnos(elementoABuscar);
         }
