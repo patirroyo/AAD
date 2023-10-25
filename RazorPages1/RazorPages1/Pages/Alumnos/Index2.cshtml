@@ -8,12 +8,10 @@
 <form asp-action="edit" asp-controller="application" method="get">
     <div class="input-group">
         <label class="col-sm-2 col-form-label" asp-for="elementoABuscar">Curso: </label>
-        <select class='form-select mb-3' asp-for="elementoABuscar" asp-items="@Html.GetEnumSelectList<Curso>()">
+        <select class='form-select mb-3 me-3' asp-for="elementoABuscar" asp-items="@Html.GetEnumSelectList<Curso>()">
             <option value=null selected>Selecciona curso ...</option>
         </select>
-    </div>
-    <div class="input-group-append">
-        <button type="submit" class="btn btn-primary">Busca!</button>
+        <button type="submit" class="btn btn-primary mb-3">Busca!</button>
     </div>
 </form>
 <br />

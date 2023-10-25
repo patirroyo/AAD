@@ -1,11 +1,13 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
+
 namespace RazorPages.Service
 {
-	public class ColegioBDContext
+	internal class ColegioBDContext : DbContext
 	{
-		public ColegioBDContext()
-		{
-		}
-	}
+        public ColegioBDContext(DbContextOptions options) : base(options)
+        {
+        }
+    }
 }
 
