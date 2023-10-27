@@ -8,6 +8,8 @@ builder.Services.AddRazorPages();
 //incorporamos una linea para relacionar el interfaz IAlumnoRepositorio y la clase AlumnoRepositorio
 builder.Services.AddSingleton<IAlumnoRepositorio, AlumnoRepositorio>();
 
+IConfiguration;
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

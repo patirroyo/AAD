@@ -21,4 +21,7 @@
     <Folder Include="Pages\Shared\Components\" />
     <Folder Include="Pages\Shared\Components\AlumnoCurso\" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
+  </ItemGroup>
 </Project>
