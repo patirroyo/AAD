@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using RazorPages.Service;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +9,14 @@ builder.Services.AddRazorPages();
 //incorporamos una linea para relacionar el interfaz IAlumnoRepositorio y la clase AlumnoRepositorio
 builder.Services.AddSingleton<IAlumnoRepositorio, AlumnoRepositorio>();
 
-IConfiguration;
+//creamos este objeto para poder llamar en el futuro al connecttion string
+IConfiguration configuration = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json")
+    .AddEnvironmentVariables()
+    .Build();
+
+//metemos la base de datos al builder
+builder.Services.AddDbContextPool<ColegioDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("ColegioDbConnection")));
 
 var app = builder.Build();
 
