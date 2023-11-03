@@ -7,7 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 //incorporamos una linea para relacionar el interfaz IAlumnoRepositorio y la clase AlumnoRepositorio
-builder.Services.AddSingleton<IAlumnoRepositorio, AlumnoRepositorio>();
+//builder.Services.AddSingleton<IAlumnoRepositorio, AlumnoRepositorio>();
+//para conectarnos a la base de datos, queremos usar 
+builder.Services.AddTransient<IAlumnoRepositorio, AlumnoRepositorioBD>();
 
 //creamos este objeto para poder llamar en el futuro al connecttion string
 IConfiguration configuration = new ConfigurationBuilder()
