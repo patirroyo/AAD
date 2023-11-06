@@ -25,6 +25,7 @@ namespace RazorPages.Service
         {
             var alumno = context.Alumnos.Attach(alumnoActualizado);
             alumno.State = Microsoft.EntityFrameworkCore.EntityState.Modified;//en lugar de guardar cambios
+            context.SaveChanges();
 
         }
         public void Add(Alumno alumnoNuevo)
