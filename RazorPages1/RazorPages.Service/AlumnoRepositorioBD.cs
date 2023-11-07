@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
 using RazorPages.Modelos;
 
 namespace RazorPages.Service
@@ -15,11 +16,15 @@ namespace RazorPages.Service
 
         public IEnumerable<Alumno> GetAllAlumnos()
         {
-            return context.Alumnos; //este método sólo devuelve la lista
+            //return context.Alumnos; //este método sólo devuelve la lista
+            return context.Alumnos.FromSqlRaw<Alumno>("SELECT * FROM Alumnos").ToList();
         }
         public Alumno GetAlumnoById(int id)
         {
-            return context.Alumnos.Find(id);
+            //return context.Alumnos.Find(id);
+            return context.Alumnos.FromSqlRaw<Alumno>("GetAlumnoById {0}", id)
+                .ToList().
+                FirstOrDefault();
         }
         public void Update(Alumno alumnoActualizado)
         {

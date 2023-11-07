@@ -17,7 +17,7 @@ IConfiguration configuration = new ConfigurationBuilder()
     .AddEnvironmentVariables()
     .Build();
 
-//metemos la base de datos al builder
+//metemos la base de datos al builder nuget EntityFrameworkCore.SqlServer
 builder.Services.AddDbContextPool<ColegioDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("ColegioDbConnection")));
 
 var app = builder.Build();
