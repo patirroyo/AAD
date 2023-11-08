@@ -41,7 +41,7 @@
     <div class="form-group row">
         <label asp-for="Photo" class="col-sm-2 col-form-label"></label>
         <div class="col-sm-10">
-            <input asp-for="Photo" class="custom-file-input" value="@Model.alumno.Foto" onchange="@Model.alumno.Foto = this.value.substring(this.value.lastIndexOf('\\')+1)"/>
+            <input asp-for="Photo" class="custom-file-input" value="@Model.alumno.Foto" onchange="lafoto.value = this.value.substring(this.value.lastIndexOf('\\')+1)"/>
             <label class="custom-file-label">Click aquí para cambiar foto</label>
         </div>
     </div>
