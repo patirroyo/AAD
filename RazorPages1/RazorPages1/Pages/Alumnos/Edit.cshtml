@@ -13,7 +13,7 @@
     <!--hay que añadir el tipo de encriptamiento-->
     <!--se suele utilizar el método POST-->
     <input type="hidden" asp-for="alumno.Id" /><!--con esto sacamos los atributos, no los mostramos pero los tenemos-->
-    <input type="hidden" asp-for="alumno.Foto" />
+    <input type="hidden" asp-for="alumno.Foto" id="lafoto" />
     <div class="form-group row">
         <label asp-for="alumno.Nombre" class="col-sm-2 col-form-label"></label>
         <div class="col-sm-10">
@@ -41,12 +41,12 @@
     <div class="form-group row">
         <label asp-for="Photo" class="col-sm-2 col-form-label"></label>
         <div class="col-sm-10">
-            <input asp-for="Photo" class="custom-file-input" value="@Model.alumno.Foto"/>
+            <input asp-for="Photo" class="custom-file-input" value="@Model.alumno.Foto" onchange="@Model.alumno.Foto = this.value.substring(this.value.lastIndexOf('\\')+1)"/>
             <label class="custom-file-label">Click aquí para cambiar foto</label>
         </div>
     </div>
     <div class="form-group row col-sm-4 offset-4">
-        <img class="imageThumbail" src="@photo"  asp-append-version="true" />
+        <img class="imageThumbail" src="@photo"  asp-append-version="true"  />
     </div>
     <div class="form-group row">
         <div class="col-sm-10">
