@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using RazorPages.Modelos;
 
@@ -22,9 +23,15 @@ namespace RazorPages.Service
         public Alumno GetAlumnoById(int id)
         {
             //return context.Alumnos.Find(id);
-            return context.Alumnos.FromSqlRaw<Alumno>("GetAlumnoById {0}", id)
+            SqlParameter parameter = new SqlParameter("@Id", id);
+
+            return context.Alumnos.FromSqlRaw<Alumno>("GetAlumnoById @Id", parameter)
                 .ToList().
                 FirstOrDefault();
+
+            /*return context.Alumnos.FromSqlRaw<Alumno>("GetAlumnoById {0}", id)
+                .ToList().
+                FirstOrDefault();*/
         }
         public void Update(Alumno alumnoActualizado)
         {
@@ -36,8 +43,16 @@ namespace RazorPages.Service
         public void Add(Alumno alumnoNuevo)
         {
             //alumnoNuevo.Id = context.Alumnos.Max(a => a.Id) + 1; es autoincrementativo ya no hace falta
-            context.Alumnos.Add(alumnoNuevo);
-            context.SaveChanges();
+            //context.Alumnos.Add(alumnoNuevo);
+            //context.SaveChanges();
+            
+            context.Database.ExecuteSqlRaw("insertarAlumno {0}, {1}, {2}, {3}",
+                alumnoNuevo.Nombre,
+                alumnoNuevo.Email,
+                alumnoNuevo.Foto,
+                alumnoNuevo.CursoId);
+
+            return ;
         }
         public Alumno Delete(int idBorrar)
         {
