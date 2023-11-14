@@ -5,5 +5,30 @@
 
 <div class="text-center">
     <h1 class="display-4">Equipos</h1>
-   
+
+</div>
+
+
+<div class="card-group">
+    @foreach(var equipo in Model.Equipos)
+    {
+        //var photo = "~/images/" + (equipo.Foto ?? "noimage.jpg");
+        <div class="card m-3 border" style="min-width: 18rem; max-width:30%">
+            <div class="card-header text-center">
+                <h3>@equipo.nomEquipo</h3>
+            </div>
+            <div class="card-body">
+                <p>Id: <strong>@equipo.Id</strong></p>
+                <p>Ciudad: <strong>@equipo.ciudad</strong></p>
+                <p>Año de Fundación: <strong>@equipo.anoFundacion</strong></p>
+                <p>Nombre del Estadio: <strong>@equipo.nomEstadio</strong></p>
+            </div>
+            <div class="card-footer text-center">
+                <!--Aquí creamos un enlace a la pagina de detalles, pasándole un entero con la identificación del alumno-->
+                <a asp-page="/Alumnos/Details" asp-route-ID="@equipo.Id" class="btn btn-primary m1">View</a>
+                <a asp-page="/Alumnos/Edit" asp-route-ID="@equipo.Id" class="btn btn-primary m1">Edit</a>
+                <a asp-page="/Alumnos/Delete" asp-route-ID="@equipo.Id" class="btn btn-danger m-1">Erase</a>
+            </div>
+        </div>
+    }
 </div>

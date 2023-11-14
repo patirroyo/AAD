@@ -1,46 +1,49 @@
 ﻿<Properties StartupConfiguration="{2C1A4A24-3D6A-4100-9607-C68423725A1F}|Default">
-  <MonoDevelop.Ide.ItemProperties.Modelos FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Services/EquipoRepositorio.cs">
+  <MonoDevelop.Ide.ItemProperties.ProjectFutbol PreferredExecutionTarget="/Applications/Browserosaurus.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProjectFutbol/Pages/Equipos/Index.cshtml">
     <Files>
-      <File FileName="ProjectFutbol/Pages/Index.cshtml" Line="10" Column="7" />
-      <File FileName="ProjectFutbol/Pages/Shared/_Layout.cshtml" Line="26" Column="95" />
-      <File FileName="ProjectFutbol/Pages/Equipos/Index.cshtml" Line="8" Column="4" />
-      <File FileName="ProjectFutbol/Pages/Equipos/Index.cshtml.cs" Line="1" Column="1" />
-      <File FileName="Modelos/Class1.cs" Line="2" Column="22" />
+      <File FileName="ProjectFutbol/Pages/Index.cshtml" />
+      <File FileName="ProjectFutbol/Pages/Shared/_Layout.cshtml" />
+      <File FileName="ProjectFutbol/Pages/Equipos/Index.cshtml" Line="14" Column="13" />
+      <File FileName="ProjectFutbol/Pages/Equipos/Index.cshtml.cs" Line="23" Column="13" />
       <File FileName="Modelos/Equipo.cs" Line="7" Column="41" />
-      <File FileName="Services/Class1.cs" Line="13" Column="1" />
-      <File FileName="Services/IEquipoRepositorio.cs" Line="15" Column="15" />
-      <File FileName="Services/EquipoRepositorio.cs" Line="6" Column="53" />
+      <File FileName="Modelos/Categoria.cs" Line="11" Column="1" />
+      <File FileName="Services/IEquipoRepositorio.cs" Line="12" Column="9" />
+      <File FileName="Services/EquipoRepositorio.cs" Line="25" Column="1" />
+      <File FileName="Services/FutbolDbContext.cs" Line="9" Column="1" />
+      <File FileName="ProjectFutbol/appsettings.json" Line="10" Column="12" />
+      <File FileName="ProjectFutbol/Program.cs" Line="20" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProjectFutbol">
-            <Node name="Modelos" expanded="True" />
-            <Node name="ProjectFutbol" expanded="True">
-              <Node name="Pages" expanded="True">
-                <Node name="Equipos" expanded="True">
-                  <Node name="Index.cshtml" expanded="True" />
+          <Node name="ProjectFutbol" expanded="True">
+            <Node name="ProjectFutbol">
+              <Node name="Pages">
+                <Node name="Equipos">
+                  <Node name="Index.cshtml" selected="True" />
                 </Node>
                 <Node name="Shared" expanded="True" />
               </Node>
             </Node>
-            <Node name="Services" expanded="True">
+            <Node name="Services">
               <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
                 <Node name="ProjectDependencies" expanded="True" />
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.ProjectFutbol PreferredExecutionTarget="/Applications/Browserosaurus.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Services FirstBuild="True" />
 </Properties>

@@ -1,11 +1,15 @@
 ﻿using System;
+using Modelos;
+
 namespace Services
 {
-	public class IEquipoRepositorio
+	public interface IEquipoRepositorio
 	{
-		public IEquipoRepositorio()
-		{
-		}
-	}
+        IEnumerable<Equipo> GetAllEquipos();
+        Equipo GetEquipoById(int id);
+        void Update(Equipo equipoActualizado);
+        void Add(Equipo equipoNuevo);
+        Equipo Delete(int idBorrar);
+    }
 }
 

@@ -1,7 +1,23 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using Microsoft.EntityFrameworkCore;
+using Services;
+
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddTransient<IEquipoRepositorio, EquipoRepositorio>();
+
+//creamos este objeto para poder llamar en el futuro al connecttion string
+IConfiguration configuration = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json")
+    .AddEnvironmentVariables()
+    .Build();
+
+//metemos la base de datos al builder nuget EntityFrameworkCore.SqlServer
+builder.Services.AddDbContextPool<FutbolDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("FutbolDbConnection")));
+
 
 var app = builder.Build();
 
