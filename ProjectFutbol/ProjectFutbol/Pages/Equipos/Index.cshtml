@@ -5,7 +5,7 @@
 
 <div class="text-center">
     <h1 class="display-4">Equipos</h1>
-
+    <h2>Total: <strong>@Model.Equipos.Count()</strong></h2>
 </div>
 
 
@@ -24,10 +24,9 @@
                 <p>Nombre del Estadio: <strong>@equipo.nomEstadio</strong></p>
             </div>
             <div class="card-footer text-center">
-                <!--Aquí creamos un enlace a la pagina de detalles, pasándole un entero con la identificación del alumno-->
-                <a asp-page="/Alumnos/Details" asp-route-ID="@equipo.Id" class="btn btn-primary m1">View</a>
-                <a asp-page="/Alumnos/Edit" asp-route-ID="@equipo.Id" class="btn btn-primary m1">Edit</a>
-                <a asp-page="/Alumnos/Delete" asp-route-ID="@equipo.Id" class="btn btn-danger m-1">Erase</a>
+                <a asp-page="/Equipos/Details" asp-route-ID="@equipo.Id" class="btn btn-primary m1">View</a>
+                <a asp-page="/Equipos/Edit" asp-route-ID="@equipo.Id" class="btn btn-primary m1">Edit</a>
+                <a asp-page="/Equipos/Delete" asp-route-ID="@equipo.Id" class="btn btn-danger m-1">Erase</a>
             </div>
         </div>
     }
