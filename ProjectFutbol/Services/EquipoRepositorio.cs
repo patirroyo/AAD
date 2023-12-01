@@ -26,7 +26,7 @@ namespace Services
         }
         public void Add(Equipo equipoNuevo)
         {
-            equipoNuevo.Id = context.Equipos.Max(a => a.Id) + 1;
+            var cosa = context.Equipos.Max(a => a.Id);
             context.Equipos.Add(equipoNuevo);
             context.SaveChanges();
 
