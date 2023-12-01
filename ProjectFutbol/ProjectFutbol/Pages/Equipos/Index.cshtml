@@ -7,7 +7,10 @@
     <h1 class="display-4">Equipos</h1>
     <h2>Total: <strong>@Model.Equipos.Count()</strong></h2>
 </div>
-
+<div class="col-sm-8">
+    <!--await Component.InvokeAsync("AlumnosCursoContar")-->
+    @await Component.InvokeAsync("EquiposCategoria")
+</div>
 
 <div class="card-group">
     @foreach(var equipo in Model.Equipos)

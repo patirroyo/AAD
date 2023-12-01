@@ -8,7 +8,8 @@ namespace Services
     public class EquipoRepositorio : IEquipoRepositorio
 	{
         private readonly FutbolDbContext context;
-		public EquipoRepositorio(FutbolDbContext context)
+
+        public EquipoRepositorio(FutbolDbContext context)
         { 
             this.context = context;
 		
@@ -49,6 +50,25 @@ namespace Services
             equipo.State = Microsoft.EntityFrameworkCore.EntityState.Modified;//en lugar de guardar cambios
             context.SaveChanges();
         }
+
+        public IEnumerable<CategoriaCuantos> EquiposPorCategoria(Categoria? categoria)
+        {
+            IEnumerable<Equipo> consulta = context.Equipos;
+            if (categoria.HasValue)
+            {
+                consulta = consulta.Where(e => e.categoria == categoria).ToList();
+            }
+
+            return consulta.GroupBy(e => e.categoria)
+                .Select(g => new CategoriaCuantos()//g es por el aGrupamiento
+                {
+                    Categoria = g.Key,
+                    NumEquipos = g.Count()
+                }).ToList();//el resultado lo convertimos en lista
+
+        }
+
+       
     }
 }
 

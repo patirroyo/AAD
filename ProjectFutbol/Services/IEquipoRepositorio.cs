@@ -10,6 +10,7 @@ namespace Services
         void Update(Equipo equipoActualizado);
         void Add(Equipo equipoNuevo);
         Equipo Delete(int idBorrar);
+        IEnumerable<CategoriaCuantos> EquiposPorCategoria(Categoria? categoria);
     }
 }
 

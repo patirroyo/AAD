@@ -8,9 +8,15 @@
 
   <ItemGroup>
     <None Remove="Pages\Equipos\" />
+    <None Remove="Components\" />
+    <None Remove="Pages\Shared\Components\" />
+    <None Remove="Pages\Shared\Components\EquiposCategoria\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\Equipos\" />
+    <Folder Include="Components\" />
+    <Folder Include="Pages\Shared\Components\" />
+    <Folder Include="Pages\Shared\Components\EquiposCategoria\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Services\Services.csproj">
