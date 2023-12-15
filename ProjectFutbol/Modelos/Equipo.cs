@@ -1,8 +1,11 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Modelos
 {
     public class Equipo
     {
         public int Id { get; set; }
+        [Required]
         public string nomEquipo { get; set; }
         public string ciudad { get; set; }
         public string nomEstadio { get; set; }

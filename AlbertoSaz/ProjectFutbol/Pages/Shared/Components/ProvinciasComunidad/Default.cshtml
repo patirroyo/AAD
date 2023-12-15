@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ComunidadCuantos>
+<h3 class="text-center">Provincias por Comunidad</h3>
+<table class="table table-bordered text-center">
+    <thead class="thead-ligth">
+        <tr>
+            <th>Comunidad</th>
+            <th>Superficie</th>
+            <th>Número de habitantes</th>
+            <th>Número de Provincias</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ComunidadCuantos in Model)
+        {
+            <tr>
+                <td>@ComunidadCuantos.Comunidad</td>
+                <td>@ComunidadCuantos.SuperficieTotal</td>
+                <td>@ComunidadCuantos.NumeroHabitantes</td>
+                <td>@ComunidadCuantos.NumeroProvincias</td>
+            </tr>
+
+        }
+    </tbody>
+</table>

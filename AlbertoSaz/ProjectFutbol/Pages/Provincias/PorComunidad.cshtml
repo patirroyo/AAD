@@ -1,0 +1,46 @@
+﻿@page
+@model AlbertoSaz.Pages.Provincias.PorComunidad
+@{
+}
+
+<div class="text-center">
+    <h1 class="display-4">Provincias filtradas por Comunidad Autónoma</h1>
+    <h2>Total: <strong>@Model.Provincias.Count()</strong></h2>
+    <form asp-action="edit" asp-controller="application" method="get">
+        <div class="input-group">
+            <label class="col-sm-2 col-form-label" asp-for="elementoABuscar">Comunidad: </label>
+            <select class='form-select mb-3 me-3' asp-for="elementoABuscar" asp-items="@Html.GetEnumSelectList<Comunidad>()">
+            </select>
+            <button type="submit" class="btn btn-primary mb-3">Busca!</button>
+        </div>
+    </form>
+    <br />
+    <br />
+    <div class="col-sm-8 mx-auto">
+        <!--await Component.InvokeAsync("AlumnosCursoContar")-->
+        @await Component.InvokeAsync("ProvinciasComunidad")
+    </div>
+</div>
+<div class="card-group">
+    @foreach(var provincia in Model.Provincias)
+        {
+        <div class="card m-3 border" style="min-width: 18rem; max-width:30%">
+            <div class="card-header text-center">
+                <h3>@provincia.nomProvincia</h3>
+            </div>
+
+            <div class="card-body">
+                <p>Código de la Provincia: <strong>@provincia.codProvincia</strong></p>
+                <p>Superficie: <strong>@provincia.superficie</strong></p>
+                <p>Número de Habitantes: <strong>@provincia.numHabitantes</strong></p>
+                <p>Comunidad: <strong>@provincia.codComunidad</strong></p>
+            </div>
+
+            <div class="card-footer text-center" style="z-index:1">
+                
+            </div>
+            
+
+        </div>
+    }
+</div>

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'ProjectFutbol' " />
+  <ItemGroup>
+    <None Remove="Components\" />
+    <None Remove="Pages\Shared\Components\" />
+    <None Remove="Pages\Provincias\" />
+    <None Remove="Pages\Shared\Components\ProvinciasComunidad\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Components\" />
+    <Folder Include="Pages\Shared\Components\" />
+    <Folder Include="Pages\Provincias\" />
+    <Folder Include="Pages\Shared\Components\ProvinciasComunidad\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.13" />
+  </ItemGroup>
+</Project>

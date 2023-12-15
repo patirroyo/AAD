@@ -1,0 +1,41 @@
+﻿@page
+@model AlbertoSaz.Pages.Provincias.IndexModel
+@{
+}
+
+<div class="text-center">
+    <h1 class="display-4">Provincias</h1>
+    <a href="/Provincias/PorComunidad" class="btn btn-info my-3 mx-auto">Buscar por comunidad</a>
+    <br />
+    <h2>Total: <strong>@Model.Provincias.Count()</strong></h2>
+    <br />
+    <div class="col-sm-8 mx-auto">
+        <!--await Component.InvokeAsync("AlumnosCursoContar")-->
+        @await Component.InvokeAsync("ProvinciasComunidad")
+    </div>
+</div>
+<br />
+<br />
+<div class="card-group">
+    @foreach (var provincia in Model.Provincias)
+    {
+        <div class="card m-3 border" style="min-width: 18rem; max-width:30%">
+            <div class="card-header text-center">
+                <h3>@provincia.nomProvincia</h3>
+            </div>
+
+            <div class="card-body">
+                <p>Código de la Provincia: <strong>@provincia.codProvincia</strong></p>
+                <p>Superficie: <strong>@provincia.superficie</strong></p>
+                <p>Número de Habitantes: <strong>@provincia.numHabitantes</strong></p>
+                <p>Comunidad: <strong>@provincia.codComunidad</strong></p>
+            </div>
+
+            <div class="card-footer text-center" style="z-index:1">
+
+            </div>
+
+
+        </div>
+    }
+</div>
