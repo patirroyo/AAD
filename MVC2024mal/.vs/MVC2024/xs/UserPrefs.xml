@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{C0A5C48A-DCB8-42B2-9581-516E953FD077}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MVC2024/Views/Marca/Create1.cshtml">
+    <Files>
+      <File FileName="MVC2024/Controllers/MarcaController.cs" Line="11" Column="5" />
+      <File FileName="MVC2024/Views/Marca/Create.cshtml" Line="1" Column="1" />
+      <File FileName="MVC2024/Models/Contexto.cs" />
+      <File FileName="MVC2024/Program.cs" />
+      <File FileName="MVC2024/appsettings.json" />
+      <File FileName="MVC2024/Models/MarcaModelo.cs" />
+      <File FileName="MVC2024/Views/Marca/Create1.cshtml" Line="31" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MVC2024" expanded="True">
+            <Node name="MVC2024">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views">
+                <Node name="Marca">
+                  <Node name="Create1.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MVC2024 PreferredExecutionTarget="/Applications/Browserosaurus.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
