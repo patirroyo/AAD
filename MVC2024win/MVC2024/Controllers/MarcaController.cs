@@ -30,7 +30,7 @@ namespace MVC2024.Controllers
 
         public ActionResult Desplegable()
         {
-            ViewBag.Marcas = new SelectList(Contexto.Marcas, "ID", "Nom_Marca") ;//ViewBag Es un contenedor que existe y gracias a esto guardamos cosas
+            ViewBag.Marcas = new SelectList(Contexto.Marcas, "Id", "Nom_Marca") ;//ViewBag Es un contenedor que existe y gracias a esto guardamos cosas
             ViewBag.Marcas2 = Contexto.Marcas.ToList();
             return View();
         }
