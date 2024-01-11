@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using MVC2024.Models;
 
 namespace MVC2024.Controllers
@@ -16,7 +17,7 @@ namespace MVC2024.Controllers
         // GET: SerieController
         public ActionResult Index()
         {
-            List<SerieModelo> lista = Contexto.Series.ToList(); //crea una lista de marcas y la rellena con los datos de la tabla marcas
+            List<SerieModelo> lista = Contexto.Series.Include(s => s.Marca).ToList(); //crea una lista de marcas y la rellena con los datos de la tabla marcas. El include especificamos que le añadimos un objeto de otra clase, el campo Marca de SerieModelo.cs
             return View(lista); //devuelve la vista
         }
 
