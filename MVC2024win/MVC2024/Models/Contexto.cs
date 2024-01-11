@@ -16,5 +16,6 @@ namespace MVC2024.Models
         //DbSet es un objeto equivalente a un ienumerable
         //y se usa para tratar tablas como listas y a sus elementos como items
         public DbSet<SerieModelo> Series { get; set; }
+        public DbSet<VehiculoModelo> Vehiculos { get; set;}
     }
 }
