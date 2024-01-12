@@ -13,13 +13,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Matricula)
+                @Html.DisplayName("Matrícula")
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Color)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Serie)
+                @Html.DisplayName("Modelo")
+            </th>
+            <th>
+                @Html.DisplayName("Marca")
             </th>
             <th></th>
         </tr>
@@ -35,6 +38,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Serie.NomSerie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serie.Marca.Nom_Marca)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

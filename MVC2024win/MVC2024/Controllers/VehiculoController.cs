@@ -18,7 +18,8 @@ namespace MVC2024.Controllers
         // GET: VehiculoController
         public ActionResult Index()
         {
-            List<VehiculoModelo> lista = Contexto.Vehiculos.Include(v => v.Serie).ToList(); //crea una lista de marcas y la rellena con los datos de la tabla marcas. El include especificamos que le añadimos un objeto de otra clase, el campo Marca de SerieModelo.cs
+            List<VehiculoModelo> lista = Contexto.Vehiculos.Include(v => v.Serie).Include(v => v.Serie.Marca).ToList(); //crea una lista de vehiculos y la rellena con los datos de la tabla serie. El include especificamos que le añadimos un objeto de otra clase
+           
             return View(lista); //devuelve la vista
         }
 
