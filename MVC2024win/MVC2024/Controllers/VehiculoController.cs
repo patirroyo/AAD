@@ -28,6 +28,7 @@ namespace MVC2024.Controllers
 
         public ActionResult Busqueda(string searchFor ="")//la interrogación indica que puede ser nulo, la primera vez que se carga la página es nulo y no da error
         {
+            ViewBag.searchFor = searchFor;
             var list = from v in Contexto.Vehiculos.Include(v =>v.Serie)
                            where v.Matricula.Contains(searchFor)
                            select v;      
