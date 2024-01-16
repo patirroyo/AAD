@@ -35,6 +35,15 @@ namespace MVC2024.Controllers
 
             return View(list); //devuelve la vista
         }
+        public ActionResult Busqueda2(string searchFor = "")//la interrogación indica que puede ser nulo, la primera vez que se carga la página es nulo y no da error
+        {
+            ViewBag.matriculas = new SelectList(Contexto.Vehiculos, "Matricula", "Matricula", searchFor);
+            var list = from v in Contexto.Vehiculos.Include(v => v.Serie)
+                       where v.Matricula.Equals(searchFor)
+                       select v;
+
+            return View(list); //devuelve la vista
+        }
 
         // GET: VehiculoController/Details/5
         public ActionResult Details(int id)
