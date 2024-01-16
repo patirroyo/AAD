@@ -18,9 +18,21 @@ namespace MVC2024.Controllers
         // GET: VehiculoController
         public ActionResult Index()
         {
+            /*
+            ViewBag.marcas = Contexto.Marcas.ToList();
+            var lista = Contexto.Vehiculos.Include(v => v.Serie).ToList(); */
             List<VehiculoModelo> lista = Contexto.Vehiculos.Include(v => v.Serie).Include(v => v.Serie.Marca).ToList(); //crea una lista de vehiculos y la rellena con los datos de la tabla serie. El include especificamos que le añadimos un objeto de otra clase
            
             return View(lista); //devuelve la vista
+        }
+
+        public ActionResult Busqueda(string searchFor ="")//la interrogación indica que puede ser nulo, la primera vez que se carga la página es nulo y no da error
+        {
+            var list = from v in Contexto.Vehiculos.Include(v =>v.Serie)
+                           where v.Matricula.Contains(searchFor)
+                           select v;      
+
+            return View(list); //devuelve la vista
         }
 
         // GET: VehiculoController/Details/5

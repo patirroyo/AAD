@@ -1,15 +1,22 @@
 ﻿@model IEnumerable<MVC2024.Models.VehiculoModelo>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Busqueda";
 }
 
-<h1>Index</h1>
+<h1>Busqueda</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
-    <a asp-action="Busqueda">Búsqueda</a>
 </p>
+
+<form method="get">
+    <input type="search" id="searchFor "name="searchFor" placeholder="Buscar por matrícula" /><!--Lo importente es el name, tiene que ser el mismo que el que le hemos dado en el método Busqueda del controlador que está relacionado con la vista (VehiculoController)  -->
+    <input type="submit" value="Buscar" />
+
+</form>
+
+
 <table class="table">
     <thead>
         <tr>
@@ -21,9 +28,6 @@
             </th>
             <th>
                 @Html.DisplayName("Modelo")
-            </th>
-            <th>
-                @Html.DisplayName("Marca")
             </th>
             <th></th>
         </tr>
@@ -39,9 +43,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Serie.NomSerie)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Serie.Marca.Nom_Marca)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
