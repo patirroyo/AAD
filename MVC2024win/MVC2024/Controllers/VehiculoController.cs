@@ -79,7 +79,9 @@ namespace MVC2024.Controllers
         // GET: VehiculoController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            ViewBag.SerieId = new SelectList(Contexto.Series, "Id", "NomSerie");
+            VehiculoModelo vehiculo = Contexto.Vehiculos.Find(id);
+            return View(vehiculo);
         }
 
         // POST: VehiculoController/Edit/5
