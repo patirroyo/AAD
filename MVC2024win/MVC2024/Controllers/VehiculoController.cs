@@ -87,8 +87,14 @@ namespace MVC2024.Controllers
         // POST: VehiculoController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, VehiculoModelo cocheDatosNew)
         {
+            VehiculoModelo cocheDatosOld = Contexto.Vehiculos.Find(id);
+            cocheDatosOld.Matricula = cocheDatosNew.Matricula;
+            cocheDatosOld.Color = cocheDatosNew.Color;
+            cocheDatosOld.SerieId = cocheDatosNew.SerieId;
+            Contexto.SaveChanges();
+
             try
             {
                 return RedirectToAction(nameof(Index));
