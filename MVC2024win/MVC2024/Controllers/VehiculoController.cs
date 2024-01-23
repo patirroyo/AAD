@@ -48,7 +48,9 @@ namespace MVC2024.Controllers
         // GET: VehiculoController/Details/5
         public ActionResult Details(int id)
         {
-            VehiculoModelo vehiculo = Contexto.Vehiculos.Include("Serie.Marca").FirstOrDefault(v => v.Id == id);
+            VehiculoModelo vehiculo = Contexto.Vehiculos.Include("Serie.Marca").FirstOrDefault(v => v.Id == id);//incluimos Serie y Marca de una vez, no hace falta usar el ViewBag
+            //ViewBag.Serie = Contexto.Series.Find(vehiculo.SerieId);
+            //ViewBag.Marca = Contexto.Marcas.Find(ViewBag.MarcaId);
             return View(vehiculo);
         }
 
@@ -109,7 +111,8 @@ namespace MVC2024.Controllers
         // GET: VehiculoController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            VehiculoModelo vehiculo = Contexto.Vehiculos.Include("Serie.Marca").FirstOrDefault(v => v.Id == id);
+            return View(vehiculo);
         }
 
         // POST: VehiculoController/Delete/5
@@ -117,6 +120,9 @@ namespace MVC2024.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
         {
+            VehiculoModelo cocheBorrar = Contexto.Vehiculos.Find(id);
+            Contexto.Vehiculos.Remove(cocheBorrar);
+            Contexto.SaveChanges();
             try
             {
                 return RedirectToAction(nameof(Index));
