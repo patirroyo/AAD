@@ -21,6 +21,13 @@ namespace MVC2024.Controllers
             return View(lista); //devuelve la vista
         }
 
+        public ActionResult Listado(int id)
+        {
+            //Contexto.Marcas.Find(id).LasSeries = Contexto.Series.Where(s => s.MarcaId == id).ToList();
+            //return View(Contexto.Marcas.Find(id)); //devuelve la vista
+            return View(Contexto.Marcas.Include(m => m.LasSeries).FirstOrDefault(m => m.Id == id));
+        }
+
         // GET: SerieController/Details/5
         public ActionResult Details(int id)
         {

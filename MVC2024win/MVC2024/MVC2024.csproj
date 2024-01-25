@@ -19,7 +19,4 @@
   <ItemGroup>
     <None Remove="Views\Marca\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Marca\" />
-  </ItemGroup>
 </Project>
