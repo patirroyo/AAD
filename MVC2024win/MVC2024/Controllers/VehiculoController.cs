@@ -26,7 +26,7 @@ namespace MVC2024.Controllers
             return View(lista); //devuelve la vista
         }
 
-        public ActionResult Busqueda(string searchFor ="")//la interrogación indica que puede ser nulo, la primera vez que se carga la página es nulo y no da error
+        public ActionResult Busqueda(string searchFor ="")
         {
             ViewBag.searchFor = searchFor;
             var list = from v in Contexto.Vehiculos.Include(v =>v.Serie)
@@ -35,11 +35,30 @@ namespace MVC2024.Controllers
 
             return View(list); //devuelve la vista
         }
-        public ActionResult Busqueda2(string searchFor = "")//la interrogación indica que puede ser nulo, la primera vez que se carga la página es nulo y no da error
+        public ActionResult Busqueda2(string searchFor = "")
         {
             ViewBag.matriculas = new SelectList(Contexto.Vehiculos, "Matricula", "Matricula", searchFor);
             var list = from v in Contexto.Vehiculos.Include(v => v.Serie)
                        where v.Matricula.Equals(searchFor)
+                       select v;
+
+            return View(list); //devuelve la vista
+        }
+
+        public ActionResult Busqueda3(string searchMarca = "", string searchModelo = "")
+        {
+            ViewBag.marcas = new SelectList(Contexto.Marcas, "Nom_Marca", "Nom_Marca", searchMarca);
+            
+            if (searchMarca != "") {
+                var marca = Contexto.Marcas.FirstOrDefault(m => m.Nom_Marca == searchMarca);
+                IEnumerable<SerieModelo> modelos = from m in Contexto.Series
+                                                   where m.MarcaId == marca.Id
+                                                   select m;
+
+                ViewBag.modelos = new SelectList(modelos, "NomSerie", "NomSerie", searchModelo);
+            }
+            var list = from v in Contexto.Vehiculos.Include(v => v.Serie).Include(v => v.Serie.Marca)
+                       where v.Serie.Marca.Nom_Marca.Equals(searchMarca) && v.Serie.NomSerie.Equals(searchModelo)
                        select v;
 
             return View(list); //devuelve la vista
