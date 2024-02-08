@@ -8,7 +8,13 @@ namespace MVC2024.Controllers
 {
     public class VehiculoController : Controller
     {
-
+        public class VehiculoTotal //una clase dentro de otra clase, para poder hacer una consulta con datos de varias tablas
+        {
+            public string Nom_Marca { get; set; }
+            public string NomSerie { get; set; }
+            public string Matricula { get; set; }
+            public string Color { get; set; }
+        }
         public Contexto Contexto { get; } //Se crea un objeto de la clase contexto, para poder usar sus métodos (acceder a la base de datos)
 
         public VehiculoController(Contexto contexto)
@@ -23,6 +29,12 @@ namespace MVC2024.Controllers
             var lista = Contexto.Vehiculos.Include(v => v.Serie).ToList(); */
             List<VehiculoModelo> lista = Contexto.Vehiculos.Include(v => v.Serie).Include(v => v.Serie.Marca).ToList(); //crea una lista de vehiculos y la rellena con los datos de la tabla serie. El include especificamos que le añadimos un objeto de otra clase
            
+            return View(lista); //devuelve la vista
+        }
+
+        public ActionResult Listado2()
+        {
+            List<VehiculoTotal> lista = Contexto.VistaTotal.ToList();
             return View(lista); //devuelve la vista
         }
 
@@ -45,20 +57,20 @@ namespace MVC2024.Controllers
             return View(list); //devuelve la vista
         }
 
-        public ActionResult Busqueda3(string searchMarca = "", string searchModelo = "")
+        public ActionResult Busqueda3(int searchMarca = 0, int searchModelo = 0)
         {
-            ViewBag.marcas = new SelectList(Contexto.Marcas, "Nom_Marca", "Nom_Marca", searchMarca);
+            ViewBag.marcas = new SelectList(Contexto.Marcas, "Id", "Nom_Marca", searchMarca);
             
-            if (searchMarca != "") {
-                var marca = Contexto.Marcas.FirstOrDefault(m => m.Nom_Marca == searchMarca);
+            if (searchMarca != 0 && searchMarca != null) {
+               // var marca = Contexto.Marcas.FirstOrDefault(m => m.Id == searchMarca);
                 IEnumerable<SerieModelo> modelos = from m in Contexto.Series
-                                                   where m.MarcaId == marca.Id
+                                                   where m.MarcaId == searchMarca
                                                    select m;
 
-                ViewBag.modelos = new SelectList(modelos, "NomSerie", "NomSerie", searchModelo);
+                ViewBag.modelos = new SelectList(modelos, "Id", "NomSerie", searchModelo);
             }
             var list = from v in Contexto.Vehiculos.Include(v => v.Serie).Include(v => v.Serie.Marca)
-                       where v.Serie.Marca.Nom_Marca.Equals(searchMarca) && v.Serie.NomSerie.Equals(searchModelo)
+                       where v.Serie.Marca.Id.Equals(searchMarca) && v.Serie.Id.Equals(searchModelo)
                        select v;
 
             return View(list); //devuelve la vista
