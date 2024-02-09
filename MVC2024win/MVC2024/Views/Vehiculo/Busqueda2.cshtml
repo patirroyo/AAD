@@ -11,10 +11,10 @@
 </p>
 
 <form method="get">
-    <select id="searchFor" name="searchFor" class="form-control" asp-items="ViewBag.matriculas">
+    <select id="searchFor" name="searchFor" class="form-control" asp-items="ViewBag.matriculas" onchange="submit()">
         <option value="">Seleccione una matrícula</option>
     </select>
-    <input type="submit" value="Buscar" />
+
 
 </form>
 <table class="table">

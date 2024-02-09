@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using static MVC2024.Controllers.VehiculoController;
+using MVC2024.Models;
 
 namespace MVC2024.Models
 {
@@ -30,5 +31,8 @@ namespace MVC2024.Models
         //le ponemos el nombre de la vista que hemos creado en la base de datos, es una vista de selección de datos de varias tablas
 
         public DbSet<VehiculoTotal> VistaTotal { get; set; }
+        //le ponemos el nombre de la vista que hemos creado en la base de datos, es una vista de selección de datos de varias tablas
+
+        public DbSet<SucursalModelo>? Sucursales { get; set; }
     }
 }
