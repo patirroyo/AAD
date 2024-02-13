@@ -1,0 +1,71 @@
+﻿@model IEnumerable<MVC2024.Models.VehiculoModelo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p
+<p>
+    <a asp-action="Busqueda">Búsqueda</a>
+</p>
+<p>
+    <a asp-action="Busqueda2">Búsqueda2</a>
+</p>
+<p>
+    <a asp-action="Busqueda3">Búsqueda3</a>
+</p>
+<p>
+    <a asp-action="Listado2">Listado2 VehiculoTotal</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Matrícula")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayName("Modelo")
+            </th>
+            <th>
+                @Html.DisplayName("Marca")
+            </th>
+            <th>
+                @Html.DisplayName("Sucursal")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matricula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serie.NomSerie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serie.Marca.Nom_Marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sucursal.Nombre)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

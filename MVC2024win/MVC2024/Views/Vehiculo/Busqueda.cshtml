@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MVC2024.Models.VehiculoModelo>
+
+@{
+    ViewData["Title"] = "Busqueda";
+}
+
+<h1>Busqueda</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form method="get">
+    <input type="search" id="searchFor "name="searchFor" placeholder="Buscar por matrícula" value="@ViewBag.searchFor" /><!--Lo importente es el name, tiene que ser el mismo que el que le hemos dado en el método Busqueda del controlador que está relacionado con la vista (VehiculoController)  -->
+    <input type="submit" value="Buscar" />
+
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Matrícula")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayName("Modelo")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matricula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serie.NomSerie)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

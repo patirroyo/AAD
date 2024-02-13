@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MVC2024.Models.VehiculoModelo>
+
+@{
+    ViewData["Title"] = "Busqueda3";
+}
+
+<h1>Busqueda3</h1>
+
+<form method="get">
+    <select id="searchMarca" name="searchMarca" asp-items="ViewBag.marcas" onchange="submit()">
+        <option value="">Seleccione una marca</option>
+    </select>
+    <select id="searchModelo" name="searchModelo" asp-items="ViewBag.modelos" onchange="submit()">
+        <option value="">Seleccione un modelo</option>
+    </select>
+
+</form>
+
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Matricula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayName("Modelo")
+            </th>
+            <th>
+                @Html.DisplayName("Marca")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matricula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serie.NomSerie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serie.Marca.Nom_Marca)
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
