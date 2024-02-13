@@ -6,6 +6,12 @@
 
 <h1>Todos los vehículos</h1>
 
+<form method="get">
+    <select id="color" name="color" asp-items="ViewBag.color" onchange="submit()">
+        <option value="">Seleccione un color</option>
+    </select>
+</form>
+
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -28,7 +34,7 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Nom_Marca)

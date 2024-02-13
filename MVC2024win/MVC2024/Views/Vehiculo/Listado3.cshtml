@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MVC2024.Controllers.VehiculoController.VehiculoTotal>
+
+@{
+    ViewData["Title"] = "Listado3";
+}
+
+<h1>Listado3</h1>
+
+<form method="get">
+    <select id="color" name="color" asp-items="ViewBag.colores" onchange="submit()">
+        <option value="%">Seleccione un color</option>
+    </select>
+</form>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Marca")
+            </th>
+            <th>
+                @Html.DisplayName("Modelo")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Matricula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nom_Marca)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomSerie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Matricula)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

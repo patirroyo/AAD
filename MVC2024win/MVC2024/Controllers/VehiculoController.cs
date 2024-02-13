@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using MVC2024.Models;
 
@@ -34,8 +35,25 @@ namespace MVC2024.Controllers
 
         public ActionResult Listado2()
         {
-            List<VehiculoTotal> lista = Contexto.VistaTotal.ToList();
+            //List<VehiculoTotal> lista = Contexto.VistaTotal.ToList();
+            var lista = Contexto.VistaTotal.FromSql($"SELECT  Vehiculos.Matricula, Vehiculos.Color, Marcas.Nom_Marca, Series.NomSerie FROM Marcas INNER JOIN Series ON Marcas.Id = Series.MarcaId INNER JOIN Vehiculos ON Series.Id = Vehiculos.SerieId");
             return View(lista); //devuelve la vista
+        }
+
+        public ActionResult Listado3(String color = "%")
+        {
+            var elColor = new SqlParameter("@ColorSel", color);
+            
+            //ViewBag.colores = new SelectList(Contexto.Vehiculos.Select(v => new { Color = v.Color }).Distinct(), "Color", "Color");
+            ViewBag.colores = new SelectList(Contexto.Vehiculos.Select(v => v.Color).Distinct(), color);
+
+
+            // var lista = Contexto.VistaTotal.FromSql($"EXECUTE getSeriesVehiculos");
+            //var lista = Contexto.VistaTotal.FromSql($"EXECUTE getVehiculosPorColor {color}");//llamamos a un procedimiento almacenado con un parámetro que se le pasa como un vector entre llaves, si hay más de un parámetro se separan por comas
+
+            var lista = Contexto.VistaTotal.FromSql($"EXECUTE getVehiculosPorColor {elColor}");
+
+            return View(lista); 
         }
 
         public ActionResult Busqueda(string searchFor ="")
