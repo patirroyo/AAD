@@ -56,6 +56,15 @@ namespace MVC2024.Controllers
             return View(lista); 
         }
 
+        public ActionResult Seleccion(int marcaId = 1, int serieId = 0)
+        {
+           ViewBag.lasMarcas = new SelectList(Contexto.Marcas, "Id", "Nom_Marca", marcaId);
+            ViewBag.lasSeries = new SelectList(Contexto.Series.Where(s => s.MarcaId == marcaId), "Id", "NomSerie", serieId);
+            List<VehiculoModelo> vehiculos = Contexto.Vehiculos.Include(v => v.Serie).Include(v => v.Serie.Marca).Include(v => v.Sucursal).Where(v => v.Serie.MarcaId == marcaId && (serieId == 0 || v.SerieId == serieId)).ToList();
+
+            return View(vehiculos);
+        }
+
         public ActionResult Busqueda(string searchFor ="")
         {
             ViewBag.searchFor = searchFor;

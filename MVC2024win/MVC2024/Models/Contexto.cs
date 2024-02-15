@@ -34,5 +34,9 @@ namespace MVC2024.Models
         //le ponemos el nombre de la vista que hemos creado en la base de datos, es una vista de selección de datos de varias tablas
 
         public DbSet<SucursalModelo>? Sucursales { get; set; }
+
+        public DbSet<ExtraModelo>? Extras { get; set; }
+
+        public DbSet<VehiculoExtraModelo>? VehiculoExtra { get; set; }
     }
 }
