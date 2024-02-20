@@ -28,7 +28,8 @@ namespace MVC2024.Controllers
             /*
             ViewBag.marcas = Contexto.Marcas.ToList();
             var lista = Contexto.Vehiculos.Include(v => v.Serie).ToList(); */
-            List<VehiculoModelo> lista = Contexto.Vehiculos.Include(v => v.Serie).Include(v => v.Serie.Marca).Include(v => v.Sucursal).ToList(); //crea una lista de vehiculos y la rellena con los datos de la tabla serie. El include especificamos que le añadimos un objeto de otra clase
+            List<VehiculoModelo> lista = Contexto.Vehiculos.Include(v => v.Serie).Include(v => v.Serie.Marca).Include(v => v.Sucursal).Include(v => v.VehiculoExtra).ToList(); //crea una lista de vehiculos y la rellena con los datos de la tabla serie. El include especificamos que le añadimos un objeto de otra clase
+            ViewBag.extras = Contexto.Extras.ToList();
            
             return View(lista); //devuelve la vista
         }
@@ -117,6 +118,7 @@ namespace MVC2024.Controllers
         {
             ViewBag.SerieId = new SelectList(Contexto.Series, "Id", "NomSerie");
             ViewBag.SucursalId = new SelectList(Contexto.Sucursales, "Id", "Nombre");
+            ViewBag.ExtrasSeleccionados = new MultiSelectList(Contexto.Extras, "ID", "NomExtra");
             return View();
         }
 
@@ -128,6 +130,14 @@ namespace MVC2024.Controllers
             Contexto.Vehiculos.Add(vehiculo);
             Contexto.Database.EnsureCreated();
             Contexto.SaveChanges();
+
+            foreach(var xtraID in vehiculo.ExtrasSeleccionados)
+            {
+                var obj = new VehiculoExtraModelo { vehiculoId = vehiculo.Id, extraID = xtraID };
+                Contexto.VehiculoExtra.Add(obj);
+            }
+            Contexto.SaveChanges();
+            
             try
             {
                 return RedirectToAction(nameof(Index));
