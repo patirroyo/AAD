@@ -152,7 +152,10 @@ namespace MVC2024.Controllers
         public ActionResult Edit(int id)
         {
             ViewBag.SerieId = new SelectList(Contexto.Series, "Id", "NomSerie");
+            ViewBag.SucursalId = new SelectList(Contexto.Sucursales, "Id", "Nombre");
             VehiculoModelo vehiculo = Contexto.Vehiculos.Find(id);
+            vehiculo.ExtrasSeleccionados = Contexto.VehiculoExtra.Where(v => v.vehiculoId == id).Select(v => v.extraID).ToList();
+            ViewBag.ExtrasSeleccionados = new MultiSelectList(Contexto.Extras, "ID", "NomExtra", vehiculo.ExtrasSeleccionados);
             return View(vehiculo);
         }
 
@@ -165,6 +168,20 @@ namespace MVC2024.Controllers
             cocheDatosOld.Matricula = cocheDatosNew.Matricula;
             cocheDatosOld.Color = cocheDatosNew.Color;
             cocheDatosOld.SerieId = cocheDatosNew.SerieId;
+            cocheDatosOld.SucursalId = cocheDatosNew.SucursalId;
+            cocheDatosOld.ExtrasSeleccionados = cocheDatosNew.ExtrasSeleccionados;
+
+            Contexto.VehiculoExtra.RemoveRange(Contexto.VehiculoExtra.Where(v => v.vehiculoId == id));
+
+            if (cocheDatosNew.ExtrasSeleccionados == null)
+            {
+                cocheDatosNew.ExtrasSeleccionados = new List<int>();
+            }
+            foreach (var xtraID in cocheDatosNew.ExtrasSeleccionados)
+            {
+                var obj = new VehiculoExtraModelo { vehiculoId = cocheDatosOld.Id, extraID = xtraID };
+                Contexto.VehiculoExtra.Add(obj);
+            }
             Contexto.SaveChanges();
 
             try

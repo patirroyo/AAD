@@ -1,0 +1,140 @@
+﻿@model ExamenAlbertoSaz.Models.ProductoModelo
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h1>Detalles de @Html.DisplayFor(model => model.Nombre)</h1>
+
+<form method="get" class="mt-3 mb-3">
+    <select id="id" name="id" asp-items="ViewBag.productos" onchange="submit()">
+        <option value="">Seleccione un producto</option>
+    </select>
+</form>
+
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Precio)€
+        </dd>
+    </dl>
+</div>
+<h2>Compras</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Proveedor")
+            </th>
+            <th>
+                @Html.DisplayName("Cantidad")
+            </th>
+            <th>
+                @Html.DisplayName("Precio Unitario")
+            </th>
+            <th>
+                @Html.DisplayName("Fecha")
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (CompraModelo item in ViewBag.Compras)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Proveedor.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cantidad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Precio)€
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha)
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot style="font-weight: bold">
+        <tr>
+            <td>
+                Total Cantidad Comprada
+            </td>
+            <td>
+                @ViewBag.CantidadComprada
+            </td>
+            <td>
+                Total Precio
+            </td>
+            <td>
+                @ViewBag.PrecioCompra€
+            </td>
+
+        </tr>
+    </tfoot>
+</table>
+
+<h2>Ventas</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Cliente")
+            </th>
+            <th>
+                @Html.DisplayName("Cantidad")
+            </th>
+            <th>
+                @Html.DisplayName("Precio Unitario")
+            </th>
+            <th>
+                @Html.DisplayName("Fecha")
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (VentaModelo item in ViewBag.Ventas)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cliente.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cantidad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Precio)€
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha)
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot style="font-weight: bold">
+        <tr>
+            <td>
+                Total Cantidad Vendida
+            </td>
+            <td>
+                @ViewBag.CantidadVendida
+            </td>
+            <td>
+                Total Precio
+            </td>
+            <td>
+                @ViewBag.PrecioVenta€
+            </td>
+
+        </tr>
+    </tfoot>
+</table>
+

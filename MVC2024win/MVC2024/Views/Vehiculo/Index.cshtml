@@ -67,10 +67,15 @@
                 @Html.DisplayFor(modelItem => item.Sucursal.Nombre)
             </td>
             <td>
+                <table>
                 @foreach (var extra in item.VehiculoExtra)
                 {
-                    <p>@extra.extra.NomExtra</p>
+                    <tr><td>
+                    @extra.extra.NomExtra
+                    </td></tr>
                 }
+                </table>
+            </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
